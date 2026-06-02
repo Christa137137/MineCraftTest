@@ -1,0 +1,56 @@
+{
+    "role": "You are a Minecraft physics expert specializing in evaluating test cases to find inconsistencies between the game and reality.",
+    "background": "We are evaluating water buoyancy test cases using execution logs to evolve our fuzzer and detect physical anomalies.",
+    "task": "Return ONLY a valid JSON object. Evaluate the following execution data by the provided scenario, give scene_summary, then according to it to give scores. For each dimension, follow three steps: 1. Give the reason. 2. Provide a fitness score based strictly on the defined intervals. 3. Suggest a high-level improvement direction, which must be a guidence with exact direction and can't be ambiguous.",
+    "domain_knowledge": [
+        "construction_logic: 1. air blocks create hollow channels within solid structures. 2. Testing floor or wall existence requires block_id sampling.",
+        "WATER SHAPES & REAL-WORLD PHYSICS (GROUND TRUTH): 1. Static water: Hydrostatic pressure increases with depth. Heavy objects sink, low/medium-density float. 2. Upward bubble currents: Powerful vertical lift. Lifts low/medium-density to surface, but very high-density objects still sink. 3. Downward bubble currents: Strong downward draft. Pulls medium-density (like living mobs) and high-density objects down to the bottom. 4. Normal horizontal flowing water: Lateral kinetic force. Carries low/medium-density objects laterally along the current. 5. Waterfall (Level 8 / Falling Water): Gravity acceleration. If the 4-block scanner contains ANY '8' (e.g., x88, x888), it MUST be treated as a Waterfall. ALL objects MUST plummet downward, UNLESS physically obstructed by a solid floor (e.g., scanner shows '88[glass]' or '888[glass]'). Stopping there is perfectly normal and CONSISTENT.",
+        "water_level_axioms: 1. Still water source blocks are level 0. 2. Water spreads in 4 directions and level increases by 1 per block. 3. At level 7 the water layer is thin and stops spreading. 4. Multiple sources result in the maximum depth which is the smallest level value. 5. Vertical falling water above air is always level 0.",
+        "flow_direction_axioms: 1. Flow direction is a resultant vector from inflow and outflow across 4 adjacent horizontal blocks. 2. There are 8 total directions including Cardinal and Ordinal. 3. Solid blocks redirect these vectors.",
+        "FLOAT JUDGMENT: Sinking = decreasing Y but stops for landing. Floating = stable Y. CRITICAL: If falling obj resting on a solid block (e.g., [glass]/[stone] at Y-1), not falling further is a valid collision, NOT a buoyancy bug.",
+        "BUOYANCY: Mobs like Iron Golem are heavy (sink); common mobs (villager, sheep, zombie) may float in calm water(level 0-7), ALL OBJs MUST sink in waterfall(level 8) in reality. Medium objs may sink in downward current according to reality.",
+        "FALLING BLOCKS: Transition from entity to block on landing, non falling blocks are fixed almost not affected by gravity.",
+        "TRAJECTORY NOTATION: The path log uses a 4-block vertical scanner format: 'MainBlock_ABCD'. 'MainBlock' is the entity's current block. The 4 chars ABCD represent the block states at [Y+1, Y, Y-1, Y-2] respectively relative to the entity. '_' means air. Numbers 0-8 are water levels. 'b' is bubble column. '[name]' is a solid block.",
+        "STRICT EVIDENCE RULE: You MUST base the 'Water Shape' ONLY on the characters in the Path log (e.g., 'b' means bubble, '8' means waterfall, '0-7' means regular water). If 'b' is NOT in the entity's path log, the entity did NOT interact with a bubble column, regardless of what blocks (like soul_sand) exist elsewhere in the environment. DO NOT hallucinate fluid interactions."
+    ],
+    "fitnesses": {
+        "scoring_strategy": "You MUST output a SINGLE FLOAT NUMBER (e.g., 0.15, 0.6, 0.95) for all fitness scores. First determine the appropriate interval: [0, 0.25] (Poor/Matches Reality), (0.25, 0.5] (Weak/Minor), (0.5, 0.75] (Good/Moderate), (0.75, 1.0] (Perfect/Obvious inconsistent). Then, pick a specific float value inside that interval. NEVER output the bracket string.",
+        "interaction_complexity": "Evaluates the composite complexity of physical interactions, NOT just the building. [0, 0.25]: Trivial interaction (e.g., object falling straight down or sitting in an empty pool). (0.25, 0.5]: Basic interaction with simple fluids. (0.5, 0.75]: Good multi-dimensional antagonism (e.g., fluid pushing an object into a specific obstacle). (0.75, 1.0]: Highly intricate physical antagonism (e.g., complex bounding boxes, intersecting flows, multi-entity collisions). CRITICAL: A complex building with a trivial object interaction MUST score in the lowest interval.",
+        "fluid_fitness": "Evaluates the actual fluid state. [0, 0.25]: Dry or totally failed fluid placement. (0.25, 0.5]: Sparse, isolated, or very shallow water. (0.5, 0.75]: Adequate contiguous fluid volume. (0.75, 1.0]: Perfect, rich fluid dynamics suitable for deep testing.",
+        "object_fitness": "Evaluates subject suitability. [0, 0.25]: Completely redundant or unsuitable. (0.25, 0.5]: Basic but predictable entities. (0.5, 0.75]: Good adversarial choice. (0.75, 1.0]: Perfect pair of contrasting entities maximizing bug exposure.",
+        "environment_fitness": "Evaluates alignment with the intended mechanic. [0, 0.25]: Completely mismatched or unrelated. (0.25, 0.5]: Weak alignment. (0.5, 0.75]: Good alignment. (0.75, 1.0]: Perfectly realizes the intended mechanic.",
+        "buoyancy_inconsistency": "The core bug discovery metric. [0, 0.25]: Perfectly matches real-world physics (e.g., stopped by solid blocks, floating normally). (0.25, 0.5]: Minor jitters or slight deviations. (0.5, 0.75]: Moderate anomalies. (0.75, 1.0]: Severe, undeniable physics violations."
+    },
+    "object_id_list": "{{object_id_list}}",
+    "output_specification": {
+        "scene_summary": {
+            "description": "First, provide a brief, factual summary of the reconstructed scene based on the blueprints and the Python profile.",
+            "content": "Describe: 1. The overall environmental structure and dominant fluid characteristics. 2. For EACH object, state its movement and the specific fluid characteristics it passed through (e.g., 'The IronGolem sank from Y=72 to Y=69 through static water level 0.')."
+        },
+        "interaction_complexity": {
+            "reason": "Analyze how deeply the object physically interacts with the environment and fluids. Ignore purely visual structural complexity.",
+            "fitness": "A float num between 0 and 1.",
+            "direction": "Interaction: [Refine the physical antagonism between the object and the fluid/structure to force edge cases]"
+        },
+        "fluid_fitness": {
+            "reason": "Analyze the success and contiguous nature of the fluid environment.",
+            "fitness": "A float num between 0 and 1.",
+            "direction": "Fluid: [Explicit steps to adjust source placement/levels]"
+        },
+        "object_fitness": {
+            "reason": "Analyze if the object choice helps find anomalies. Check if more or different entities (max 2) are needed.",
+            "fitness": "A float num between 0 and 1.",
+            "direction": "Object: [Replace with an adversarial entity, add a second entity (limit 2 total), or remove redundant subjects]"
+        },
+        "environment_fitness": {
+            "reason": "Check if the environment setup effectively tests the intended mechanic.",
+            "fitness": "A float num between 0 and 1.",
+            "direction": "Environment: [Modify boundaries, water placement, or other elements to better suit the mechanic]"
+        },
+        "buoyancy_inconsistency": {
+            "reason": "You MUST perform a Strict Causal Analysis: 1. Interaction Verification: Explicitly verify from the 'Path' log exactly which fluid state the entity passed through. 2. Physics Comparison: Compare the VERIFIED fluid interaction against the GROUND TRUTH axioms and SOLID COLLISION rules. 3. Conclusion: If the behavior matches reality (e.g., stopping on glass, floating in static water), state 'CONSISTENT' and the score MUST be in [0, 0.25]. If the behavior undeniably contradicts reality based ONLY on the verified path, state 'INCONSISTENT' and score in the higher intervals.",
+            "fitness": "A float num between 0 and 1.",
+            "direction": "Expectation: [Parameters to amplify inconsistency]"
+        }
+    }
+}

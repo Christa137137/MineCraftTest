@@ -1,0 +1,72 @@
+{
+  "interactive_physics_objects": {
+    "gravity_blocks": [
+      "anvil",
+      "sand",
+      "red_sand",
+      "gravel",
+      "pointed_dripstone",
+      "dragon_egg",
+      "suspicious_sand",
+      "suspicious_gravel",
+      "scaffolding"
+    ],
+    "fluid_interactive_blocks": [
+      "sponge",
+      "wet_sponge",
+      "magma_block",
+      "soul_sand",
+      "scaffolding",
+      "powder_snow",
+      "tnt"
+    ],
+    "mechanical_entities": [
+      "oak_boat;2*1*2",
+      "spruce_boat;2*1*2",
+      "mangrove_boat;2*1*2",
+      "minecart;1*1*1",
+      "tnt_minecart;1*1*1",
+      "chest_minecart;1*1*1",
+      "hopper_minecart;1*1*1"
+    ]
+  },
+  "swimming_mobs": [
+    "dolphin;1*1*1",
+    "glow_squid;1*1*1",
+    "squid;1*1*1",
+    "salmon;1*1*1",
+    "cod;1*1*1",
+    "pufferfish;1*1*1",
+    "tropical_fish;1*1*1",
+    "axolotl;1*1*1",
+    "turtle;2*1*2",
+    "drowned;1*2*1",
+    "guardian;1*1*1",
+    "elder_guardian;2*2*2",
+    "frog;1*1*1",
+    "tadpole;1*1*1"
+  ],
+  "non_swimming_mobs": [
+    "iron_golem;2*3*2",
+    "villager;1*2*1",
+    "piglin;1*2*1",
+    "hoglin;2*2*2",
+    "zoglin;2*2*2",
+    "zombie;1*2*1",
+    "skeleton;1*2*1",
+    "creeper;1*2*1",
+    "witch;1*2*1",
+    "pillager;1*2*1",
+    "ravager;2*3*2",
+    "cow;1*2*1",
+    "pig;1*1*1",
+    "sheep;1*2*1",
+    "chicken;1*1*1",
+    "rabbit;1*1*1",
+    "wolf;1*1*1",
+    "cat;1*1*1",
+    "panda;2*2*2",
+    "polar_bear;2*2*2",
+    "enderman;1*3*1"
+  ]
+}

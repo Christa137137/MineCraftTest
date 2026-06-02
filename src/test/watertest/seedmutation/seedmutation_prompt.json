@@ -1,0 +1,80 @@
+{
+    "role": "Minecraft physics auditor specializing in mutation-guided fuzzing for buoyancy inconsistencies.",
+    "goal": "Mutate 'seed' cases based on evaluation to find game-to-reality physics bugs.",
+    "task": "Fix low-score areas and refine high-score ones. Mutate according to 'mutation_logic'.",
+    "original_seed_template": "{{original_seed}}",
+    "mutation_logic": "{{mutation_guidance}}",
+    "output_specification": "Return ONLY a valid JSON object. Use standard JSON array formatting for coordinates. Output one testcase. Indices start at 0.",
+    "output_format_template": {
+        "object_blocks": [
+            ["block_id", "instance_name", ["x1", "y1", "z1"], ["x2", "y2", "z2"]]
+        ],
+        "object_mobs": [
+            ["entity_or_mob_id", "instance_name", ["x", "y", "z"]]
+        ],
+        "environment": [
+            ["block_id", ["x1", "y1", "z1"], ["x2", "y2", "z2"]]
+        ],
+        "action_sequence": [
+            ["timestamp", "environment|object_blocks|object_mobs", "index", null]
+        ]
+    },
+    "output_info": [
+        "CRITICAL ENTITIES: mechanical_entities objects (boats, minecarts) MUST be in 'object_mobs' not 'object_blocks'(not good but we do this way); All blocks use 'object_blocks'(e.g. sand). IDs MUST be accurate (e.g., 'acacia_boat').",
+        "FAITHFUL EXECUTION: You MUST read the 'Object:' field in the mechanic description and summon EXACTLY the entities requested. Do not add or remove subjects.",
+        "SEQUENCE LOGIC: Build environment at time 0. Wait 5s for water stability. Spawn objects/mobs later. 'x sleep_till' x timestamp represents the test ends at x(not sleep duration). Must leave >= 10s after objects/mobs generated for tracking, the trajectory object_mob and object_block(falling) are tracked automatically. The water level along the trajectory is tracked automatically.",
+        "TIMESTAMP: 1 unit = 1 second. For example, 5 seconds MUST be written as 5, NOT 5000. MUST within 30s and greater than 15s for tracking, otherwise test fails.",
+        "COORDINATES: Area = [x1, y1, z1], [x2, y2, z2] (list of 3,3 integers, end can equal start); Point = [x, y, z] (3 integers). Pivot X=0, Y=70, Z=0.",
+        "ENVIRONMENT: Space < 10x10. Use 'air' to clear blocks. Usually build the env at time 0; Wait 5s for water stabilization before spawning objects.",
+        "ACTION TYPES: Only use one of: 'environment', 'object_blocks', 'object_mobs'.",
+        "ACTION - ENVIRONMENT/OBJECTS: [timestamp, 'environment'|'object_blocks'|'object_mobs', index, null]. 'index' is the integer index from the corresponding list(begin = 0, max = len()-1), objs like boat are not block so can only use 'object_mobs",
+        "ACTION - SLEEP_TILL: [timestamp, 'sleep_till', null, null]. Used to define observation duration(max 30).",
+        "CONSTRAINTS: All timestamps and indices are integers (as interger in the list). No 'move_block' or 'modify_entity' exists.",
+        "FLUID DYNAMICS IN MC: Water spreads 7 blocks horizontally from a source. Falling water flows straight down until it hits a solid block, then spreads. To test flow, you must place the object IN the flow path, not outside of it."
+    ],
+    "domain_knowledge": [
+        "FLOAT JUDGMENT: Sinking = decreasing Y in logs but may stop for landing. Floating = stable Y (minor oscillation < 1.0). Falling blocks become blocks on landing.",
+        "HITBOXES (W*H*D): You MUST strictly reserve the required empty volume. The 'H' value is the EXACT number of vertical free blocks needed above the spawn floor (e.g., H=3 requires a strictly 3-block tall cavity). If 'W' or 'D' >= 2, you MUST reserve a 3x3 horizontal free area around the spawn center [X, Z]. NEVER place solid roofs or walls within this required H-tall and 3x3-wide bounding box.",
+        "FALLING BLOCKS: Transition from entity to block on landing, falling blocks like gravel and sand are heavier than water, non falling blocks are fixed almost not affected by gravity.",
+        "INTERACTIVE BLOCKS RULES: To create bubble columns, you MUST place soul_sand (for Upward Bubbles) or magma_block (for Downward Bubbles) AT THE VERY BOTTOM FLOOR of a static water pool. The water blocks directly on top of them MUST be static (level 0). NEVER place them in the air or above the water. Sponge: Absorbs water within a 7-block radius.",
+        "PHYSICS BASELINE: Boat (High buoyancy, seeks surface), Minecart (Zero buoyancy, ignores fluid).",
+        "BUOYANCY: Mobs like Iron Golem are heavy (sink); common mobs (villager, sheep, zombie) may float in calm water(level 0-7), and may sink in falling water(level 8). Falling blocks like sand and gravel are heavier than water. MUST Set object at least 2 blocks above the bottom or you can't judge.",
+        "REDUNDANCY: Never repeat scenarios from 'used_slugs'. Avoid overusing an object if frequent in history."
+    ],
+    "object_id_list": "{{object_id_list}}",
+    "mutation_method": {
+        "object_mutation": "Change mob/block type or position or other properties based on buoyancy evaluation.",
+        "environment_mutation": "Modify water levels, flow directions, or container shapes per guidance.",
+        "action_sequence_mutation": "Adjust command timing or observation duration to capture behavior better."
+    },
+    "structure_mutation_method": {
+        "static_basin": [
+            "Deepen/Shallow Floor: Modify the Y-axis depth of the basin to test pressure over different distances.",
+            "Expand/Shrink Footprint: Scale the X and Z axes to adjust the basin's total surface area.",
+            "Add Island: Place glass blocks in the middle of the fluid to create dry obstacles.",
+            "Uneven Floor: Raise localized sections of the basin floor to create stepped or sloped underwater terrain."
+        ],
+        "horizontal_trough": [
+            "Lengthen/Shorten: Scale the X-axis of the channel to test flow momentum over distance.",
+            "Shift Source: Move the water source block to change the starting point of the current.",
+            "Add Obstacle: Place a glass block in the middle of the flow path to test current redirection.",
+            "Stepped Flow: Create descending floor steps so the water flows horizontally then drops down."
+        ],
+        "waterfall_shaft": [
+            "Change Drop Height: Scale the Y-axis to make the waterfall taller or shorter.",
+            "Widen/Narrow Shaft: Change the X/Z cross-section size of the vertical drop.",
+            "Catch Basin Modification: Deepen or widen the water pool at the bottom where the waterfall lands."
+        ],
+        "upward_bubble_pool": [
+            "Partial Floor: Replace some soul_sand blocks with regular glass so the upward bubbles only exist in a specific section.",
+            "Deepen/Shallow: Scale the Y-axis to test if the upward lift strength changes over greater depths.",
+            "Shift Spawning: Spawn the entity slightly off-center (near the edge of the bubble column) to test lateral convection push."
+        ],
+        "downward_bubble_pool": [
+            "Partial Floor: Replace some magma_block blocks with regular glass to create mixed draft zones.",
+            "Deepen/Shallow: Scale the Y-axis to test downward drag strength over different depths.",
+            "Shift Spawning: Spawn the entity on the boundary between the downward current and static water."
+        ]
+    },
+    "don't_repeat_slugs": "{{used_slugs}}"
+}

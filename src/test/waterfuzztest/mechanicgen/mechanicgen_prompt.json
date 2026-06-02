@@ -1,0 +1,27 @@
+{
+    "role": "You are a physics researcher specializing in macroscopic buoyancy and fluid statics.",
+    "background": "We are studying how objects with different densities behave in Minecraft water compared to real-world buoyancy laws.",
+    "task": "Generate a unique, abstract buoyancy test scenario.",
+    "mapping_guide": "1. Define Expected terminal state (Expectation). 2. Select exactly ONE of the 5 water shapes (Water Shape). 3. Explicitly state the physical law of this shape (Water Property). 4. Select target density class (Object). 5. Design the specific container matching the water shape (Container).",
+    "output_specification": {
+        "format": "Expectation:; Water Shape:; Water Property:; Object:; Container:.",
+        "constraints": [
+            "Expectation: Randomly select 1 or 2 subject categories from [Inanimate(can give e.g. like gravel, sand, and etc.), Swimming Living, Non-swimming Living]. Describe their terminal state strictly based on the 'Water Property'. Keep it extremely concise (e.g., plummet downward, lifted to surface, pulled to bottom, drifts laterally). DO NOT select all 3.",
+            "Water Shape: MUST strictly select exactly ONE of these 5: [Static water, Water with upward bubble currents, Water with downward bubble currents, Normal horizontal flowing water, Waterfall].",
+            "Water Property: Explicitly detail the physical property of the chosen shape. Static water: hydrostatic pressure increases with depth. Downward bubbles: generates downward draft that pulls medium-density things (like living beings) down. Upward bubbles: lifts low/medium-density objects up, but cannot lift very high-density objects. Horizontal flow: carries low/medium-density objects (like dirt/sand) laterally along the flow direction. Waterfall: all objects and living beings plummet downward rapidly due to gravity acceleration.",
+            "Object: Define ONLY the target relative density class (e.g., High-density Inanimate, Medium-density Swimming Living).",
+            "Container: Design the simple macroscopic geometry specifically suited for the water shape (e.g., basin for static/bubbles, trough/channel for horizontal flow, three sides closed with one side open for waterfall).",
+            "Constraints: No Minecraft-specific terms (commands/IDs/coords). Output only the five-component description as a single paragraph."
+        ]
+    },
+    "example": [
+        "Expectation: The medium-density swimming living entity and medium-density inanimate object are forcefully pulled down to the bottom; Water Shape: Water with downward bubble currents; Water Property: Generates a strong downward draft that pulls medium-density objects and living beings down; Object: Medium-density Swimming Living, Medium-density Inanimate; Container: A wide, sealed basin.",
+        "Expectation: The low-density inanimate object is carried laterally along the flow direction for a distance; Water Shape: Normal horizontal flowing water; Water Property: Carries medium and low-density objects laterally along the current; Object: Low-density Inanimate; Container: A long, open-topped trough.",
+        "Expectation: The medium-density non-swimming living entity is lifted to the surface, but the high-density inanimate object remains at the bottom; Water Shape: Water with upward bubble currents; Water Property: Lifts low and medium-density objects to the surface, but cannot overcome the weight of very high-density objects; Object: Medium-density Non-swimming Living, High-density Inanimate; Container: A deep basin.",
+        "Expectation: Both the high-density inanimate object and swimming living entity plummet downward continuously; Water Shape: Waterfall; Water Property: All objects and living beings fall downward rapidly due to gravity acceleration regardless of buoyancy; Object: High-density Inanimate, Medium-density Swimming Living; Container: A vertical structure enclosed on three sides with one open side for outflow."
+    ],
+    "memory_rules": {
+        "rule": "If water shapes are not exhausted, use not used ones. MUST alternate at least 1 dimension between the 5 dimensions of 'format'. Exhaust different density classes across the 5 specific fluid shapes.",
+        "don't_repeat_mechanics": "{{used_mechanics}}"
+    }
+}

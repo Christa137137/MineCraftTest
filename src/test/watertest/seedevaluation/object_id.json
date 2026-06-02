@@ -1,0 +1,72 @@
+{
+  "interactive_physics_objects": {
+    "gravity_blocks": [
+      "anvil",
+      "sand",
+      "red_sand",
+      "gravel",
+      "pointed_dripstone",
+      "dragon_egg",
+      "suspicious_sand",
+      "suspicious_gravel",
+      "scaffolding"
+    ],
+    "fluid_interactive_blocks": [
+      "sponge",
+      "wet_sponge",
+      "magma_block",
+      "soul_sand",
+      "scaffolding",
+      "powder_snow",
+      "tnt"
+    ],
+    "mechanical_entities": [
+      "oak_boat",
+      "spruce_boat",
+      "mangrove_boat",
+      "minecart",
+      "tnt_minecart",
+      "chest_minecart",
+      "hopper_minecart"
+    ]
+  },
+  "swimming_mobs": [
+    "dolphin",
+    "glow_squid",
+    "squid",
+    "salmon",
+    "cod",
+    "pufferfish",
+    "tropical_fish",
+    "axolotl",
+    "turtle",
+    "drowned",
+    "guardian",
+    "elder_guardian",
+    "frog",
+    "tadpole"
+  ],
+  "non_swimming_mobs": [
+    "iron_golem",
+    "villager",
+    "piglin",
+    "hoglin",
+    "zoglin",
+    "zombie",
+    "skeleton",
+    "creeper",
+    "witch",
+    "pillager",
+    "ravager",
+    "cow",
+    "pig",
+    "sheep",
+    "chicken",
+    "rabbit",
+    "wolf",
+    "cat",
+    "panda",
+    "polar_bear",
+    "enderman"
+  ]
+}
