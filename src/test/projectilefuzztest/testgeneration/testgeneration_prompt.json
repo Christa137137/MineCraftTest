@@ -1,0 +1,81 @@
+{
+    "role": "You are an adversarial software testing expert specializing in Minecraft physics anomalies.",
+    "background": "Our mission is to expose the failure points where Minecraft's simplified physics engine contradicts real-world ballistic laws (e.g., gravity, momentum, aerodynamic drag) when evaluating projectiles.",
+    "task": "Generate exactly one new test case according to the mechanic_description below. Output only the JSON object.",
+    "mechanic_description": "{{mechanic_description}}",
+    "output_specification": "Return ONLY a valid JSON object. Do not use nested quotes inside lists; use standard JSON array formatting for coordinates and tuples. Indices start at 0.",
+    "output_format_template": {
+        "mechanic": "the mechanic_description without change",
+        "object_blocks": [
+            ["block_id", "block_id_tag", ["x1", "y1", "z1"], ["x2", "y2", "z2"]]
+        ],
+        "object_mobs": [
+            ["projectile_id", "projectile_baseline", ["x", "y", "z"]],
+            ["projectile_id", "projectile_intervention", ["x", "y", "z"]]
+        ],
+        "environment": [
+            ["block_id", ["x1", "y1", "z1"], ["x2", "y2", "z2"]]
+        ],
+        "action_sequence": [
+            [0, "environment", "index", null],
+            [3, "projectile", "index", ["vx", "vy", "vz"]],
+            [5, "environment", "index", null],
+            [5, "environment", "index", null],
+            [8, "projectile", "index", ["vx", "vy", "vz"]],
+            [10, "sleep_till", null, null]
+        ]
+    },
+    "output_info": [
+        "SEQUENCE LOGIC (METAMORPHIC): This is a comparison test between two different media. T=0: Build 'Baseline Medium' (e.g., water, air). T=3: Launch Projectile 1 (Baseline) through the Baseline Medium. T=5: SWAP PHASE. Use 'air' to clear the exact area of the Baseline Medium, THEN place the 'Intervention Medium'(e.g., fluid/bubbles/blocks that seem can get through(e.g., oak_leaves, honey_block)) in that same area(IMPORTANT: If the intervention is a Bubble Column, you MUST ensure water remains or is re-placed above the soul_sand. DO NOT clear the trajectory area to 'air' if it needs to be water for bubbles.). T=8: Launch Projectile 2 (Intervention) at the same position and velocity. T=10: End test with 'sleep_till'. No actions allowed after T=10.",
+        "BUBBLE COLUMN CRITICAL: To activate bubbles, soul_sand must be at the bottom (e.g., Y=64) with water source blocks (level 0) directly above it (e.g., Y=65-70). If you use 'air' at T=5 on the water area, the bubbles will vanish.",
+        "SHOT TYPES: Choose exactly one: 1. Horizontal Shot (e.g., [3.0, 0.0, 0.0]). 2. Mortar Style (Angled, e.g., [2.12, 2.12, 0.0] derived from V * sin 45). 3. Vertical Sniper (Up: [0.0, 2.0, 0.0] or Down: [0.0, -2.0, 0.0]). Individual motion values MUST be in the range [-3.0, 3.0]. Third dimension Z MUST be 0.0.",
+        "PLACEMENT RULES: The Baseline and Intervention media MUST occupy the same(soul_sand's bubble column is exception, the height is not controllable, but must occupy the same width) spatial coordinates to ensure a fair comparison. For Horizontal/Mortar, place medium in the +X direction starting at X >= spawn_x + 2 as a media/obstacle like vertical curtain (e.g., 1x10x10 water) or a ground strip (e.g., soul_sand) or others. For Vertical, place a horizontal plane (e.g., 10x1x10) at Y >= spawn_y + 2 (upward) or Y <= spawn_y - 2 (downward).",
+        "TIMESTAMP: 1 unit = 1 second. For example, 5 seconds MUST be written as 5, NOT 5000. The sequence MUST be [0, 3, 5, 5, 8, 10]. Note that at T=5, two environment actions occur: one to clear (air) and one to build (new medium).",
+        "COORDINATES: Area = [x1, y1, z1], [x2, y2, z2] (list of 3,3 integers, end can equal start); Point = [x, y, z] (3 integers). Pivot X=0, Y=70, Z=0.",
+        "ENTITIES: Projectiles (arrow, snowball, trident) must be 'object_mobs'. You MUST provide 2 identical projectiles for the A/B test. IDs must be accurate.",
+        "ENVIRONMENT: Space < 20x10. Use 'air' to clear blocks. Wait 5s for medium stabilization before spawning objects.",
+        "ACTION TYPES: Only use one of: 'environment', 'object_blocks', 'object_mobs', 'get_block_id', 'sleep_till'.",
+        "ACTION - PROJECTILE: [timestamp, 'projectile', index, [vx, vy, vz]]. Launches the projectile defined in 'object_mobs' index with initial Motion vector.",
+        "ACTION - ENVIRONMENT/OBJECTS: [timestamp, 'environment'|'object_blocks'|'object_mobs', index, null]. 'index' is the integer index from the corresponding list.",
+        "ACTION - GET_BLOCK_ID: [timestamp, 'get_block_id', null, [x1, y1, z1], [x2, y2, z2]]. NOTE that last 2 params are separate pos. Returns IDs in range. A range totally 10 blocks is considered a moderate range.",
+        "ACTION - SLEEP_TILL: [timestamp, 'sleep_till', null, null]. Used to define observation duration.",
+        "CONSTRAINTS: All timestamps and indices are integers (as interger in the list). No 'move_block' or 'modify_entity' exists."
+    ],
+    "domain_knowledge": [
+        "HITBOXES: Spawn entities away from solid blocks to avoid clipping.",
+        "FALLING BLOCKS: Transition from entity to block on landing, non falling blocks are fixed almost not affected by gravity.",
+        "INTERACTIVE BLOCKS EG: soul_sand (Upward Bubbles), water (the source water block has level-0, the falling water block has level-8(considered as a water fall having downword velocity)).",
+        "REDUNDANCY: Never repeat scenarios from 'used_slugs'. Avoid overusing an object if frequent in history."
+    ],
+    "object_id_list": "{{object_id_list}}",
+    "structure_example": {
+        "horizontal_curtain": {
+            "description": "For 'Horizontal Shot'. Projectile is launched laterally (e.g., [3.0, 0.0, 0.0]). A 1x10x10 vertical curtain placed in front of the shooter.",
+            "environment": [
+                ["glass", [-2, 70, -5], [15, 80, 5]],
+                ["air", [-1, 71, -4], [14, 79, 4]],
+                ["air", [5, 71, -4], [5, 79, 4]],
+                ["water", [5, 71, -4], [5, 79, 4]]
+            ]
+        },
+        "vertical_chimney": {
+            "description": "For 'Vertical Sniper' (Upward/Downward). Projectile is launched vertically (e.g., [0.0, 2.5, 0.0]). A 10x1x10 horizontal plane placed above/below the shooter.",
+            "environment": [
+                ["glass", [-5, 70, -5], [5, 85, 5]],
+                ["air", [-4, 71, -4], [4, 84, 4]],
+                ["air", [-4, 78, -4], [4, 78, 4]],
+                ["slime_block", [-4, 78, -4], [4, 78, 4]]
+            ]
+        },
+        "parabolic_arena": {
+            "description": "For 'Mortar Style'. Projectile is launched at an angle (e.g., [2.0, 2.0, 0.0]). An obstacle placed in the parabolic trajectory path.",
+            "environment": [
+                ["glass", [-2, 70, -5], [12, 80, 5]],
+                ["air", [-1, 71, -4], [11, 79, 4]],
+                ["air", [6, 71, -4], [6, 75, 4]],
+                ["oak_leaves", [6, 71, -4], [6, 75, 4]]
+            ]
+        }
+    },
+    "don't_repeat_slugs": "{{used_slugs}}"
+}

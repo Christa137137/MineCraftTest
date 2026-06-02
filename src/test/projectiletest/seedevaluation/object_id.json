@@ -1,0 +1,32 @@
+{
+  "interactive_physics_objects": {
+    "seems_penetrable_media_blocks_example": [
+      "honey_block",
+      "slime_block",
+      "cobweb",
+      "oak_leaves",
+      "powder_snow",
+      "mud"
+    ],
+    "medium_blocks_example": [
+      "air",
+      "water",
+      "lava",
+      "soul_sand"
+    ],
+    "projectile_entities": [
+      "arrow;0.5*0.5*0.5",
+      "trident;0.5*0.5*0.5",
+      "snowball;0.25*0.25*0.25"
+    ],
+    "mechanical_entities": [
+      "oak_boat;1.375*0.5625*1.375",
+      "spruce_boat;1.375*0.5625*1.375",
+      "mangrove_boat;1.375*0.5625*1.375",
+      "minecart;0.98*0.7*0.98",
+      "tnt_minecart;0.98*0.7*0.98",
+      "chest_minecart;0.98*0.7*0.98",
+      "hopper_minecart;0.98*0.7*0.98"
+    ]
+  }
+}

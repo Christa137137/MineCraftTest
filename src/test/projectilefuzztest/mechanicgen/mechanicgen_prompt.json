@@ -1,0 +1,26 @@
+{
+    "role": "You are a physics researcher specializing in projectile ballistics and aerodynamics.",
+    "background": "We are studying how varied launch profiles and intervening media affect the kinetic energy, trajectory, and penetration behavior of projectiles in Minecraft compared to real-world physics.",
+    "task": "Generate a unique, abstract projectile test scenario.",
+    "mapping_guide": "1. Define Expected terminal state (Expectation). 2. Select exactly ONE of the 5 intervention media (Intervention Medium). 3. Explicitly state the physical law of this medium (Medium Property). 4. Select target projectile class (Projectile). 5. Select exactly ONE launch profile (Launch Profile).",
+    "output_specification": {
+        "format": "Expectation:; Intervention Medium:; Medium Property:; Projectile:; Launch Profile:.",
+        "constraints": [
+            "Expectation: Describe the expected terminal behavior (e.g., steepened parabolic arc, shattered on impact, piercing through, deflected, halted) strictly based on the 'Medium Property'. Keep it extremely concise.",
+            "Intervention Medium: MUST strictly select exactly ONE of these 5: [Standard air, Static dense fluid (water/lava), Porous/Non-solid vegetation (leaves/cobwebs), Viscous/Elastic barrier (slime/honey/mud), Aerodynamic drafts (bubble columns)].",
+            "Medium Property: Explicitly detail the physical property of the chosen medium. Standard air: applies negligible drag, allowing pure gravity-dominated parabolic flight. Static dense fluid: introduces massive hydrodynamic drag, rapidly decaying momentum. Porous vegetation: causes minor friction and velocity loss but allows potential penetration. Viscous/Elastic barrier: absorbs kinetic energy instantly or causes bounce-back. Aerodynamic drafts: exerts strong upward or downward forces altering the trajectory curve.",
+            "Projectile: MUST strictly select exactly ONE of these 3 classes: [Light sharp projectile, Heavy sharp projectile, Fragile light projectile].",
+            "Launch Profile: MUST strictly select exactly ONE of these 3 profiles: [Horizontal Shot (pure lateral momentum), Mortar Style (angled trajectory forming a parabola), Vertical Sniper (straight up/down shot)].",
+            "Constraints: No Minecraft-specific terms (commands/IDs/coords). Output only the five-component description as a single paragraph."
+        ]
+    },
+    "example": [
+        "Expectation: Rapid momentum decay causing a significantly steepened parabolic arc and premature drop; Intervention Medium: Static dense fluid; Medium Property: Introduces massive hydrodynamic drag, rapidly decaying momentum; Projectile: Light sharp projectile; Launch Profile: Horizontal Shot (pure lateral momentum).",
+        "Expectation: The projectile shatters instantly upon contact without piercing through the barrier; Intervention Medium: Viscous/Elastic barrier; Medium Property: Absorbs kinetic energy instantly or causes bounce-back, shattering fragile objects on impact; Projectile: Fragile light projectile; Launch Profile: Mortar Style (angled trajectory forming a parabola).",
+        "Expectation: The projectile experiences significant upward lift, reversing its downward acceleration or extending its apex; Intervention Medium: Aerodynamic drafts; Medium Property: Exerts strong upward or downward forces altering the trajectory curve; Projectile: Heavy sharp projectile; Launch Profile: Vertical Sniper (straight up/down shot)."
+    ],
+    "memory_rules": {
+        "rule": "If intervention media are not exhausted, use not used ones. MUST alternate at least 1 dimension between the 5 dimensions of 'format'. Exhaust different projectile classes across the specific media.",
+        "don't_repeat_mechanics": "{{used_mechanics}}"
+    }
+}
