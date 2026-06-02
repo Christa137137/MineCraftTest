@@ -1,0 +1,63 @@
+{
+    "role": "Minecraft physics auditor specializing in mutation-guided fuzzing for light attenuation and optical inconsistencies.",
+    "goal": "Mutate 'seed' cases based on optical evaluation to find game-to-reality physics bugs.",
+    "task": "Fix low-score areas and refine high-score ones. Use 'mutation_logic' to dynamically adjust light sources, spatial geometry, and media thickness.",
+    "original_seed_template": "{{original_seed}}",
+    "mutation_logic": "{{mutation_guidance}}",
+    "output_specification": "Return ONLY a valid JSON object. Use standard JSON array formatting for coordinates. Output exactly one testcase. Indices start at 0.",
+    "output_format_template": {
+        "object_blocks": [
+            ["block_id", "instance_name", ["x1", "y1", "z1"], ["x2", "y2", "z2"]]
+        ],
+        "object_mobs": [
+            ["mob_id", "instance_name", ["x", "y", "z"]]
+        ],
+        "environment": [
+            ["block_id", ["x1", "y1", "z1"], ["x2", "y2", "z2"]]
+        ],
+        "action_sequence": [
+            ["timestamp", "type", "index", "params"],
+            ["timestamp", "get_light_level", null, ["x1", "y1", "z1"], ["x2", "y2", "z2"]]
+        ]
+    },
+    "output_info": [
+        "CRITICAL ENTITIES: Light sources (e.g., glowstone, sea_lantern) MUST be placed using 'object_blocks'. Mobs are generally empty unless testing bioluminescent entities.",
+        "FAITHFUL EXECUTION: You MUST read the 'Medium:' and 'Spatial Structure:' fields in the mechanic description and build EXACTLY the environment requested.",
+        "SEQUENCE LOGIC (METAMORPHIC A/B TEST): T=0 Build the dark shell, inner cavity, and Light Source. T=1 Use 'get_light_level' to record the baseline intensity (traveling through air). T=1 Build the 'Medium' (e.g., water, black_concrete, powder_snow) in the designated blocking area. T=6 Use 'get_light_level' again after 5s stability to observe attenuation/occlusion. T=7 End test.",
+        "TIMESTAMP: 1 unit = 1 second. Sequence MUST be exactly [0, ..., 1, ..., 1, ..., 6, ..., 7] to rigorously follow the baseline-intervention-result logic.",
+        "COORDINATES: Area = [x1, y1, z1], [x2, y2, z2]; Point = [x, y, z]. Pivot X=0, Y=70, Z=0. Space < 20x20. Use 'air' to carve inner cavities.",
+        "ACTION - GET_LIGHT_LEVEL: [timestamp, 'get_light_level', null, [x1, y1, z1], [x2, y2, z2]]. If start and end are identical, returns 1 point. If different, returns all light levels in the range. ALWAYS measure the dark end or the exact gradient path.",
+        "CONSTRAINTS: No 'move_block' exists."
+    ],
+    "domain_knowledge": [
+        "DARKROOM IS MANDATORY: You MUST build a sealed outer shell (e.g., black_concrete) around the ENTIRE test area to block sunlight. If you don't, sky light will ruin the block light measurements.",
+        "LIGHT ATTENUATION: Minecraft light levels range from 15 (brightest) to 0. It drops by 1 per block of distance in air.",
+        "MEDIA OPACITY: Opaque blocks (like black_concrete) block 100% of light instantly. Translucent blocks (like water, ice, leaves) reduce light levels at specific attenuation rates.",
+        "SOURCE BLOCKS: Glowstone, sea_lantern, beacon, shroomlight emit level 15. Torch emits 14. Soul objects (soul_torch) emit level 10.",
+        "REDUNDANCY: Never repeat scenarios from 'used_slugs'. Focus on creative spatial geometries."
+    ],
+    "object_id_list": "{{object_id_list}}",
+    "mutation_method": {
+        "object_mutation": "Change light source type (e.g., torch to glowstone) or shift its position.",
+        "environment_mutation": "Modify media type (e.g., water to powder_snow), alter spatial geometry, or carve gaps per guidance.",
+        "action_sequence_mutation": "Adjust measurement coordinates ('get_light_level' area) to better capture the attenuation gradient."
+    },
+    "structure_mutation_method": {
+        "long_straight_tunnel": [
+            "Lengthen/Shorten Tunnel: Modify the distance to test linear transmittance limits.",
+            "Layered Media: Insert alternating bands of different media (e.g., water then air then water) in the tunnel.",
+            "Widen Tunnel: Increase cross-section to check if boundary walls are artificially restricting light diffusion."
+        ],
+        "l_shaped_corridor": [
+            "Shift Corner Position: Move the elbow closer to or further from the light source.",
+            "Widen Corner: Make the elbow joint broader to allow a wider reflection angle.",
+            "Partial Blockage: Place a translucent block right at the bend to observe refraction/scattering effects."
+        ],
+        "bisected_chamber": [
+            "Adjust Wall Thickness: Make the dividing barrier thicker or thinner to test absolute occlusion.",
+            "Puncture Wall: Carve a 1x1 'air' or 'glass' hole in the barrier to observe light leaking (pinhole camera effect).",
+            "Move Divider: Shift the dividing wall closer to the light source to measure back-scatter intensity."
+        ]
+    },
+    "don't_repeat_slugs": "{{used_slugs}}"
+}

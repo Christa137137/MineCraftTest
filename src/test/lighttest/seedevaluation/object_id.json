@@ -1,0 +1,47 @@
+{
+  "light_sources": [
+    "glowstone",
+    "sea_lantern",
+    "shroomlight",
+    "ochre_froglight",
+    "pearlescent_froglight",
+    "verdant_froglight",
+    "lantern",
+    "jack_o_lantern",
+    "torch",
+    "end_rod",
+    "beacon",
+    "crying_obsidian"
+  ],
+  "attenuation_media": [
+    "water",
+    "soul_sand",
+    "magma_block",
+    "lava",
+    "air",
+    "black_concrete",
+    "powder_snow"
+  ],
+  "translucent_complex_blocks": [
+    "glass",
+    "tinted_glass",
+    "white_stained_glass",
+    "black_stained_glass",
+    "slime_block",
+    "honey_block",
+    "oak_leaves",
+    "spruce_leaves",
+    "jungle_leaves",
+    "azalea_leaves",
+    "ice",
+    "packed_ice",
+    "blue_ice",
+    "scaffolding",
+    "iron_bars",
+    "glass_pane",
+    "oak_slab",
+    "oak_stairs",
+    "cobweb",
+    "cherry_leaves"
+  ]
+}

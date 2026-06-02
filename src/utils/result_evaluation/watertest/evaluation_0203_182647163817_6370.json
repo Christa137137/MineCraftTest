@@ -1,0 +1,861 @@
+{
+    "status": 1,
+    "timestamp": "2026-02-03T18:26:18.100016",
+    "logs": [
+        "[0s] generate env blocks: fill 0 70 0 6 85 6 minecraft:glass",
+        "[0s] generate env blocks: fill 1 71 1 5 84 5 minecraft:air",
+        "[0s] generate env blocks: fill 2 71 2 4 84 4 minecraft:glass",
+        "[0s] generate env blocks: fill 3 71 3 3 84 3 minecraft:air",
+        "[0s] generate env blocks: fill 1 71 1 5 84 5 minecraft:water",
+        "[0s] generate env blocks: fill 3 75 3 3 75 3 minecraft:soul_sand",
+        "[0s] generate env blocks: fill 3 76 3 3 76 3 minecraft:water",
+        "[0s] generate env blocks: fill 3 77 3 3 77 3 minecraft:water",
+        "[0s] generate env blocks: fill 3 78 3 3 78 3 minecraft:water",
+        "[0s] generate env blocks: fill 3 79 3 3 79 3 minecraft:water",
+        "[0s] generate env blocks: fill 3 80 3 3 80 3 minecraft:water",
+        "[0s] generate env blocks: fill 3 81 3 3 81 3 minecraft:water",
+        "[0s] generate env blocks: fill 3 82 3 3 82 3 minecraft:water",
+        "[0s] generate env blocks: fill 3 83 3 3 83 3 minecraft:water",
+        "[0s] generate env blocks: fill 3 84 3 3 84 3 minecraft:water",
+        "[0s] generate env blocks: fill 2 72 2 2 72 2 minecraft:water",
+        "[0s] generate env blocks: fill 2 73 2 2 73 2 minecraft:water",
+        "[0s] generate env blocks: fill 2 74 2 2 74 2 minecraft:water",
+        "[0s] generate env blocks: fill 4 72 4 4 72 4 minecraft:water",
+        "[0s] generate env blocks: fill 4 73 4 4 73 4 minecraft:water",
+        "[0s] generate env blocks: fill 4 74 4 4 74 4 minecraft:water",
+        "[0.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[0.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[0.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[1.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[1.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[1.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[1.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[1.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[1.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[2.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[2.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[2.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[2.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[2.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[2.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[3.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[3.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[3.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[3.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[3.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[3.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[4.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[4.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[4.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[4.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[4.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[4.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[5.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[5.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[5.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[5.0s] generate obj mob: summon minecraft:magma_cube 3 73 3 {Tags:[\"magma_cube_1\"]}",
+        "[5.0s] generate falling block: summon falling_block 3 72 3 {BlockState:{Name:\"minecraft:scaffolding\"},Time:1,Tags:[\"scaffolding_1\"]}",
+        "[5.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[5.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[5.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[6.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[6.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[6.0s][mob] magma_cube_1 pos: [3.5, 73.0, 3.5]",
+        "[6.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[6.0s] check block id of range 3 75 3 to 3 75 3: [3,75,3]:SOUL_SAND\n",
+        "[6.0s] check block id of range 3 76 3 to 3 76 3: [3,76,3]:[WATER, level:0]\n",
+        "[6.0s] check block id of range 3 77 3 to 3 77 3: [3,77,3]:[WATER, level:0]\n",
+        "[6.0s] check block id of range 3 78 3 to 3 78 3: [3,78,3]:[WATER, level:0]\n",
+        "[6.0s] check block id of range 3 79 3 to 3 79 3: [3,79,3]:[WATER, level:0]\n",
+        "[6.0s] check block id of range 3 80 3 to 3 80 3: [3,80,3]:[WATER, level:0]\n",
+        "[6.0s] check block id of range 3 81 3 to 3 81 3: [3,81,3]:[WATER, level:0]\n",
+        "[6.0s] check block id of range 3 82 3 to 3 82 3: [3,82,3]:[WATER, level:0]\n",
+        "[6.0s] check block id of range 3 83 3 to 3 83 3: [3,83,3]:[WATER, level:0]\n",
+        "[6.0s] check block id of range 3 84 3 to 3 84 3: [3,84,3]:[WATER, level:0]\n",
+        "[6.0s] check block id of range 2 72 2 to 2 72 2: [2,72,2]:[WATER, level:0]\n",
+        "[6.0s] check block id of range 2 73 2 to 2 73 2: [2,73,2]:[WATER, level:0]\n",
+        "[6.0s] check block id of range 2 74 2 to 2 74 2: [2,74,2]:[WATER, level:0]\n",
+        "[6.0s] check block id of range 4 72 4 to 4 72 4: [4,72,4]:[WATER, level:0]\n",
+        "[6.0s] check block id of range 4 73 4 to 4 73 4: [4,73,4]:[WATER, level:0]\n",
+        "[6.0s] check block id of range 4 74 4 to 4 74 4: [4,74,4]:[WATER, level:0]\n",
+        "[6.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[6.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[6.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[7.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[7.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[7.0s][mob] magma_cube_1 pos: [3.5, 73.0, 3.5]",
+        "[7.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[7.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[7.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[7.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[8.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[8.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[8.0s][mob] magma_cube_1 pos: [3.5, 73.0, 3.5]",
+        "[8.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[8.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[8.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[8.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[9.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[9.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[9.0s][mob] magma_cube_1 pos: [3.5, 73.0, 3.5]",
+        "[9.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[9.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[9.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[9.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[10.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[10.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[10.0s][mob] magma_cube_1 pos: [3.5, 73.0, 3.5]",
+        "[10.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[10.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[10.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[10.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[11.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[11.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[11.0s][mob] magma_cube_1 pos: [3.5, 73.0, 3.5]",
+        "[11.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[11.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[11.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[11.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[12.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[12.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[12.0s][mob] magma_cube_1 pos: [3.5, 73.0, 3.5]",
+        "[12.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[12.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[12.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[12.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[13.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[13.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[13.0s][mob] magma_cube_1 pos: [3.5, 73.0, 3.5]",
+        "[13.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[13.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[13.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[13.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[14.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[14.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[14.0s][mob] magma_cube_1 pos: [3.5, 73.0, 3.5]",
+        "[14.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[14.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[14.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[14.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[15.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[15.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[15.0s][mob] magma_cube_1 pos: [3.5, 73.0, 3.5]",
+        "[15.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]"
+    ],
+    "mechanic": "Structure: A vertical containment shaft with a narrow central column and a wider upper reservoir; Fluid: A stationary, deep water column with a localized upward current generated by a submerged source; Object: A low-density, interactive block with a hollow interior; Expectation: The object initially floats at the surface, but when displaced into the upward current, it experiences a vertical force that counteracts its weight, leading to a state of suspended equilibrium or oscillatory motion within the central column.",
+    "object_blocks": [
+        [
+            "minecraft:scaffolding",
+            "scaffolding_1",
+            [
+                3,
+                72,
+                3
+            ],
+            [
+                3,
+                72,
+                3
+            ]
+        ]
+    ],
+    "object_mobs": [
+        [
+            "minecraft:magma_cube",
+            "magma_cube_1",
+            [
+                3,
+                73,
+                3
+            ]
+        ]
+    ],
+    "environment": [
+        [
+            "minecraft:glass",
+            [
+                0,
+                70,
+                0
+            ],
+            [
+                6,
+                85,
+                6
+            ]
+        ],
+        [
+            "minecraft:air",
+            [
+                1,
+                71,
+                1
+            ],
+            [
+                5,
+                84,
+                5
+            ]
+        ],
+        [
+            "minecraft:glass",
+            [
+                2,
+                71,
+                2
+            ],
+            [
+                4,
+                84,
+                4
+            ]
+        ],
+        [
+            "minecraft:air",
+            [
+                3,
+                71,
+                3
+            ],
+            [
+                3,
+                84,
+                3
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                71,
+                1
+            ],
+            [
+                5,
+                84,
+                5
+            ]
+        ],
+        [
+            "minecraft:soul_sand",
+            [
+                3,
+                75,
+                3
+            ],
+            [
+                3,
+                75,
+                3
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                3,
+                76,
+                3
+            ],
+            [
+                3,
+                76,
+                3
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                3,
+                77,
+                3
+            ],
+            [
+                3,
+                77,
+                3
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                3,
+                78,
+                3
+            ],
+            [
+                3,
+                78,
+                3
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                3,
+                79,
+                3
+            ],
+            [
+                3,
+                79,
+                3
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                3,
+                80,
+                3
+            ],
+            [
+                3,
+                80,
+                3
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                3,
+                81,
+                3
+            ],
+            [
+                3,
+                81,
+                3
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                3,
+                82,
+                3
+            ],
+            [
+                3,
+                82,
+                3
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                3,
+                83,
+                3
+            ],
+            [
+                3,
+                83,
+                3
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                3,
+                84,
+                3
+            ],
+            [
+                3,
+                84,
+                3
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                2,
+                72,
+                2
+            ],
+            [
+                2,
+                72,
+                2
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                2,
+                73,
+                2
+            ],
+            [
+                2,
+                73,
+                2
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                2,
+                74,
+                2
+            ],
+            [
+                2,
+                74,
+                2
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                4,
+                72,
+                4
+            ],
+            [
+                4,
+                72,
+                4
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                4,
+                73,
+                4
+            ],
+            [
+                4,
+                73,
+                4
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                4,
+                74,
+                4
+            ],
+            [
+                4,
+                74,
+                4
+            ]
+        ]
+    ],
+    "action_sequence": [
+        [
+            0,
+            "environment",
+            0,
+            null
+        ],
+        [
+            0,
+            "environment",
+            1,
+            null
+        ],
+        [
+            0,
+            "environment",
+            2,
+            null
+        ],
+        [
+            0,
+            "environment",
+            3,
+            null
+        ],
+        [
+            0,
+            "environment",
+            4,
+            null
+        ],
+        [
+            0,
+            "environment",
+            5,
+            null
+        ],
+        [
+            0,
+            "environment",
+            6,
+            null
+        ],
+        [
+            0,
+            "environment",
+            7,
+            null
+        ],
+        [
+            0,
+            "environment",
+            8,
+            null
+        ],
+        [
+            0,
+            "environment",
+            9,
+            null
+        ],
+        [
+            0,
+            "environment",
+            10,
+            null
+        ],
+        [
+            0,
+            "environment",
+            11,
+            null
+        ],
+        [
+            0,
+            "environment",
+            12,
+            null
+        ],
+        [
+            0,
+            "environment",
+            13,
+            null
+        ],
+        [
+            0,
+            "environment",
+            14,
+            null
+        ],
+        [
+            0,
+            "environment",
+            15,
+            null
+        ],
+        [
+            0,
+            "environment",
+            16,
+            null
+        ],
+        [
+            0,
+            "environment",
+            17,
+            null
+        ],
+        [
+            0,
+            "environment",
+            18,
+            null
+        ],
+        [
+            0,
+            "environment",
+            19,
+            null
+        ],
+        [
+            0,
+            "environment",
+            20,
+            null
+        ],
+        [
+            5,
+            "object_mobs",
+            0,
+            null
+        ],
+        [
+            5,
+            "object_blocks",
+            0,
+            null
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                3,
+                75,
+                3
+            ],
+            [
+                3,
+                75,
+                3
+            ]
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                3,
+                76,
+                3
+            ],
+            [
+                3,
+                76,
+                3
+            ]
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                3,
+                77,
+                3
+            ],
+            [
+                3,
+                77,
+                3
+            ]
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                3,
+                78,
+                3
+            ],
+            [
+                3,
+                78,
+                3
+            ]
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                3,
+                79,
+                3
+            ],
+            [
+                3,
+                79,
+                3
+            ]
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                3,
+                80,
+                3
+            ],
+            [
+                3,
+                80,
+                3
+            ]
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                3,
+                81,
+                3
+            ],
+            [
+                3,
+                81,
+                3
+            ]
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                3,
+                82,
+                3
+            ],
+            [
+                3,
+                82,
+                3
+            ]
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                3,
+                83,
+                3
+            ],
+            [
+                3,
+                83,
+                3
+            ]
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                3,
+                84,
+                3
+            ],
+            [
+                3,
+                84,
+                3
+            ]
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                2,
+                72,
+                2
+            ],
+            [
+                2,
+                72,
+                2
+            ]
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                2,
+                73,
+                2
+            ],
+            [
+                2,
+                73,
+                2
+            ]
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                2,
+                74,
+                2
+            ],
+            [
+                2,
+                74,
+                2
+            ]
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                4,
+                72,
+                4
+            ],
+            [
+                4,
+                72,
+                4
+            ]
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                4,
+                73,
+                4
+            ],
+            [
+                4,
+                73,
+                4
+            ]
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                4,
+                74,
+                4
+            ],
+            [
+                4,
+                74,
+                4
+            ]
+        ],
+        [
+            15,
+            "sleep_till",
+            null
+        ]
+    ],
+    "fitness": {
+        "structure_complexity": {
+            "reason": "The structure is a nested glass container with a central air column (3x3x14) inside a larger glass box (5x5x15), creating a vertical shaft with a narrow central column (1x1x14). This is more complex than a simple four-wall box, featuring multiple containment layers and a defined central channel for focused fluid dynamics.",
+            "fitness": 0.6,
+            "direction": "Structure: [Add diagonal offsets or staggered platforms within the central column to create non-linear flow paths and irregular boundaries that disrupt symmetric fluid behavior]"
+        },
+        "water_variety": {
+            "reason": "The water block checks at 6s show all sampled water blocks are level 0 (still source blocks). The object (scaffolding_1) remains stationary at Y=78, and the magma cube at Y=73, both within this uniform level 0 water column. There is no evidence of water level gradients (1-7) along the objects' paths.",
+            "fitness": 0.1,
+            "direction": "Fluid: [Place water sources at varying heights outside the central column to create horizontal flow into the shaft, generating decaying water levels (1-7) that the objects must traverse vertically]"
+        },
+        "object_fitness": {
+            "reason": "Three objects are present: a stationary test_anvil (irrelevant), a stationary test_scaffolding (likely a fixed block), and a falling scaffolding_1 block that becomes stationary. The magma cube (a mob) is added but remains stationary. The scaffolding block is a good choice for testing hollow block interactions, but the magma cube's stationary behavior is redundant with past test cases involving mobs in soul sand currents. Adding a boat or minecart as a second interactive entity would better test comparative buoyancy in upward currents.",
+            "fitness": 0.4,
+            "direction": "Object: [Replace the magma cube with a minecart to test a mechanical entity's interaction with the upward current, and ensure the scaffolding block is a falling_block entity, not a fixed block]"
+        },
+        "environment_fitness": {
+            "reason": "The environment aims to create an upward current using soul sand at (3,75,3) with water source blocks stacked above it. However, the logs show all water blocks are level 0, indicating the bubble column mechanic may not have activated or is not affecting the objects. The scaffolding block and magma cube remain perfectly stationary at fixed Y coordinates, showing no response to expected upward force.",
+            "fitness": 0.3,
+            "direction": "Environment: [Replace the soul sand with a magma block to create a downward current, or ensure the soul sand bubble column is active by verifying block updates and placing the objects directly within the current's effective vertical range]"
+        },
+        "buoyancy_inconsistency": {
+            "reason": "Expectation: A low-density scaffolding block in an upward current should experience vertical force, leading to suspension or oscillation. Reality: The scaffolding_1 falling block entity, after generation at 5s, remains fixed at Y=78.0 for the entire 10-second observation. The magma cube also remains fixed at Y=73.0. Both show zero vertical motion despite the soul sand bubble column setup. This is a strong deviation from expected physics where upward currents impart motion.",
+            "fitness": 0.9,
+            "direction": "Expectation: [Increase the current strength by stacking multiple soul sand blocks vertically, and place the test objects deeper within the current to amplify the discrepancy between expected motion and observed stagnation]"
+        }
+    },
+    "tested_times": 1
+}

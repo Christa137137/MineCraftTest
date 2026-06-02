@@ -1,0 +1,26 @@
+{
+    "role": "You are a physics researcher specializing in optics and light propagation.",
+    "background": "We are studying how light behaves (attenuation, reflection, transmission) when interacting with various media and spatial structures in Minecraft, compared to real-world optical laws.",
+    "task": "Generate a unique, abstract light testing scenario.",
+    "mapping_guide": "1. Define the Expected outcome (Expectation). 2. Select exactly ONE category of light emitter (Light Source Type). 3. Explicitly state the physical optical property being tested (Optical Property). 4. Select exactly ONE type of interacting medium (Medium). 5. Design the specific spatial structure matching the test (Spatial Structure).",
+    "output_specification": {
+        "format": "Expectation:; Light Source Type:; Optical Property:; Medium:; Spatial Structure:.",
+        "constraints": [
+            "Expectation: Describe the expected state of illumination or light decay strictly based on the 'Optical Property' and 'Spatial Structure'. Keep it extremely concise (e.g., rapid attenuation, complete occlusion, diffuse scattering around corners).",
+            "Light Source Type: MUST strictly select exactly ONE of these 4 classes: [Intense crystalline/mineral source (e.g., glowstone/sea_lantern), Organic/Bioluminescent source (e.g., shroomlight/froglight), Combustion-based source (e.g., torch/lantern), Ethereal/Magical point source (e.g., end_rod/beacon)].",
+            "Optical Property: Explicitly detail the optical law being tested. E.g., Transmittance (light penetrating a medium causes exponential decay in intensity), Reflection/Diffraction (light bouncing off or bending around corners causes rapid energy loss), Complete Occlusion (opaque dense materials block 100% of photons).",
+            "Medium: MUST strictly select exactly ONE of these 4 classes: [Vacuum/Standard Air, Dense Fluid (water/lava), Semi-transparent/Particulate matter (powder_snow/soul_sand/magma), Absolute Opaque solid (black_concrete)].",
+            "Spatial Structure: Design a simple macroscopic geometry specifically suited to test the optical property (e.g., A long straight tunnel for linear decay, An L-shaped corridor for reflection/corner bending, A sealed box bisected by a wall for occlusion/transmission).",
+            "Constraints: No Minecraft-specific terms (commands/IDs/coords). Output only the five-component description as a single paragraph."
+        ]
+    },
+    "example": [
+        "Expectation: The light intensity decays exponentially as it travels through the fluid, failing to illuminate the far end of the tunnel; Light Source Type: Intense crystalline/mineral source; Optical Property: Transmittance through dense fluids causes significant scattering and exponential intensity decay; Medium: Dense Fluid; Spatial Structure: A long, straight enclosed tunnel filled entirely with the medium, with the light source at one end.",
+        "Expectation: The light completely fails to reach the other side, resulting in total darkness behind the barrier; Light Source Type: Combustion-based source; Optical Property: Complete Occlusion dictates that opaque dense materials block 100% of photon propagation; Medium: Absolute Opaque solid; Spatial Structure: A sealed rectangular chamber bisected perfectly in the middle by a solid wall of the medium.",
+        "Expectation: The illumination drops drastically immediately after the corner, showing minimal ambient bouncing; Light Source Type: Organic/Bioluminescent source; Optical Property: Reflection and diffraction around sharp corners result in rapid energy loss compared to direct line-of-sight illumination; Medium: Vacuum/Standard Air; Spatial Structure: An L-shaped enclosed corridor with the light source placed at the dead end of one arm."
+    ],
+    "memory_rules": {
+        "rule": "MUST alternate at least 1 dimension between the 5 dimensions of 'format'. Exhaust different Medium classes and Spatial Structures.",
+        "don't_repeat_mechanics": "{{used_mechanics}}"
+    }
+}

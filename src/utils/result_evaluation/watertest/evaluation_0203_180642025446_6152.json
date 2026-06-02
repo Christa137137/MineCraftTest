@@ -1,0 +1,654 @@
+{
+    "status": 1,
+    "timestamp": "2026-02-03T18:06:16.180644",
+    "logs": [
+        "[0s] generate env blocks: fill 0 70 0 4 90 4 minecraft:glass",
+        "[0s] generate env blocks: fill 1 71 1 3 89 3 minecraft:air",
+        "[0s] generate env blocks: fill 1 71 1 3 89 3 minecraft:water",
+        "[0s] generate env blocks: fill 2 71 2 2 71 2 minecraft:soul_sand",
+        "[0s] generate env blocks: fill 2 75 2 2 75 2 minecraft:magma_block",
+        "[0s] generate env blocks: fill 1 90 1 3 90 3 minecraft:glass",
+        "[0s] generate env blocks: fill 2 90 2 2 90 2 minecraft:air",
+        "[0s] generate env blocks: fill 2 72 1 2 72 3 minecraft:glass",
+        "[0s] generate env blocks: fill 1 72 2 3 72 2 minecraft:glass",
+        "[0s] generate env blocks: fill 2 73 2 2 73 2 minecraft:air",
+        "[0s] generate env blocks: fill 2 76 2 2 76 2 minecraft:air",
+        "[0s] generate env blocks: fill 2 77 2 2 77 2 minecraft:air",
+        "[0s] generate env blocks: fill 2 78 2 2 78 2 minecraft:air",
+        "[0s] generate env blocks: fill 2 79 2 2 79 2 minecraft:air",
+        "[0s] generate env blocks: fill 2 80 2 2 80 2 minecraft:air",
+        "[0s] generate env blocks: fill 2 81 2 2 81 2 minecraft:air",
+        "[0.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[0.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[0.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[0.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[1.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[1.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[1.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[1.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[1.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[1.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[1.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[1.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[2.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[2.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[2.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[2.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[2.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[2.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[2.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[2.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[3.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[3.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[3.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[3.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[3.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[3.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[3.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[3.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[4.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[4.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[4.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[4.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[4.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[4.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[4.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[4.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[5.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[5.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[5.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[5.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[5.0s] generate falling block: summon falling_block 2 85 2 {BlockState:{Name:\"minecraft:anvil\"},Time:1,Tags:[\"test_anvil\"]}",
+        "[5.0s] generate obj mob: summon minecraft:drowned 2 84 2 {Tags:[\"test_drowned\"]}",
+        "[5.0s] generate obj mob: summon minecraft:magma_cube 2 83 2 {Tags:[\"test_magma_cube\"]}",
+        "[5.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[5.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[5.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[5.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[6.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[6.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[6.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[6.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[6.0s][mob] test_drowned pos: [2.5, 84.0, 2.5]",
+        "[6.0s][mob] test_magma_cube pos: [2.5, 83.0, 2.5]",
+        "[6.0s] check block id of range 2 85 2 to 2 85 2: [2,85,2]:[WATER, level:0]\n",
+        "[6.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[6.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[6.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[6.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[7.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[7.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[7.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[7.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[7.0s][mob] test_drowned pos: [2.5, 84.0, 2.5]",
+        "[7.0s][mob] test_magma_cube pos: [2.5, 83.0, 2.5]",
+        "[7.0s] check block id of range 2 84 2 to 2 84 2: [2,84,2]:[WATER, level:0]\n",
+        "[7.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[7.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[7.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[7.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[8.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[8.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[8.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[8.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[8.0s][mob] test_drowned pos: [2.5, 84.0, 2.5]",
+        "[8.0s][mob] test_magma_cube pos: [2.5, 83.0, 2.5]",
+        "[8.0s] check block id of range 2 83 2 to 2 83 2: [2,83,2]:[WATER, level:0]\n",
+        "[8.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[8.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[8.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[8.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[9.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[9.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[9.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[9.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[9.0s][mob] test_drowned pos: [2.5, 84.0, 2.5]",
+        "[9.0s][mob] test_magma_cube pos: [2.5, 83.0, 2.5]",
+        "[9.0s] check block id of range 2 75 2 to 2 75 2: [2,75,2]:MAGMA_BLOCK\n",
+        "[9.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[9.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[9.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[9.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[10.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[10.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[10.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[10.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[10.0s][mob] test_drowned pos: [2.5, 84.0, 2.5]",
+        "[10.0s][mob] test_magma_cube pos: [2.5, 83.0, 2.5]",
+        "[10.0s] check block id of range 2 71 2 to 2 71 2: [2,71,2]:SOUL_SAND\n",
+        "[10.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[10.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[10.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[10.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[11.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[11.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[11.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[11.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[11.0s][mob] test_drowned pos: [2.5, 84.0, 2.5]",
+        "[11.0s][mob] test_magma_cube pos: [2.5, 83.0, 2.5]",
+        "[11.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[11.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[11.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[11.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[12.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[12.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[12.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[12.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[12.0s][mob] test_drowned pos: [2.5, 84.0, 2.5]",
+        "[12.0s][mob] test_magma_cube pos: [2.5, 83.0, 2.5]",
+        "[12.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[12.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[12.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[12.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[13.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[13.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[13.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[13.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[13.0s][mob] test_drowned pos: [2.5, 84.0, 2.5]",
+        "[13.0s][mob] test_magma_cube pos: [2.5, 83.0, 2.5]",
+        "[13.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[13.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[13.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[13.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[14.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[14.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[14.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[14.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[14.0s][mob] test_drowned pos: [2.5, 84.0, 2.5]",
+        "[14.0s][mob] test_magma_cube pos: [2.5, 83.0, 2.5]",
+        "[14.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[14.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[14.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[14.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[15.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[15.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[15.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[15.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[15.0s][mob] test_drowned pos: [2.5, 84.0, 2.5]",
+        "[15.0s][mob] test_magma_cube pos: [2.5, 83.0, 2.5]"
+    ],
+    "mechanic": "Structure: A vertical containment shaft with a narrow central column and a wider upper reservoir; Fluid: A stationary, deep water column with a localized upward current generated by a submerged source; Object: A low-density, interactive block with a hollow interior; Expectation: The object initially floats at the surface, but when displaced into the upward current, it experiences a vertical force that counteracts its weight, leading to a state of suspended equilibrium or oscillatory motion within the central column.",
+    "object_blocks": [
+        [
+            "minecraft:anvil",
+            "test_anvil",
+            [
+                2,
+                85,
+                2
+            ],
+            [
+                2,
+                85,
+                2
+            ]
+        ]
+    ],
+    "object_mobs": [
+        [
+            "minecraft:drowned",
+            "test_drowned",
+            [
+                2,
+                84,
+                2
+            ]
+        ],
+        [
+            "minecraft:magma_cube",
+            "test_magma_cube",
+            [
+                2,
+                83,
+                2
+            ]
+        ]
+    ],
+    "environment": [
+        [
+            "minecraft:glass",
+            [
+                0,
+                70,
+                0
+            ],
+            [
+                4,
+                90,
+                4
+            ]
+        ],
+        [
+            "minecraft:air",
+            [
+                1,
+                71,
+                1
+            ],
+            [
+                3,
+                89,
+                3
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                71,
+                1
+            ],
+            [
+                3,
+                89,
+                3
+            ]
+        ],
+        [
+            "minecraft:soul_sand",
+            [
+                2,
+                71,
+                2
+            ],
+            [
+                2,
+                71,
+                2
+            ]
+        ],
+        [
+            "minecraft:magma_block",
+            [
+                2,
+                75,
+                2
+            ],
+            [
+                2,
+                75,
+                2
+            ]
+        ],
+        [
+            "minecraft:glass",
+            [
+                1,
+                90,
+                1
+            ],
+            [
+                3,
+                90,
+                3
+            ]
+        ],
+        [
+            "minecraft:air",
+            [
+                2,
+                90,
+                2
+            ],
+            [
+                2,
+                90,
+                2
+            ]
+        ],
+        [
+            "minecraft:glass",
+            [
+                2,
+                72,
+                1
+            ],
+            [
+                2,
+                72,
+                3
+            ]
+        ],
+        [
+            "minecraft:glass",
+            [
+                1,
+                72,
+                2
+            ],
+            [
+                3,
+                72,
+                2
+            ]
+        ],
+        [
+            "minecraft:air",
+            [
+                2,
+                73,
+                2
+            ],
+            [
+                2,
+                73,
+                2
+            ]
+        ],
+        [
+            "minecraft:air",
+            [
+                2,
+                76,
+                2
+            ],
+            [
+                2,
+                76,
+                2
+            ]
+        ],
+        [
+            "minecraft:air",
+            [
+                2,
+                77,
+                2
+            ],
+            [
+                2,
+                77,
+                2
+            ]
+        ],
+        [
+            "minecraft:air",
+            [
+                2,
+                78,
+                2
+            ],
+            [
+                2,
+                78,
+                2
+            ]
+        ],
+        [
+            "minecraft:air",
+            [
+                2,
+                79,
+                2
+            ],
+            [
+                2,
+                79,
+                2
+            ]
+        ],
+        [
+            "minecraft:air",
+            [
+                2,
+                80,
+                2
+            ],
+            [
+                2,
+                80,
+                2
+            ]
+        ],
+        [
+            "minecraft:air",
+            [
+                2,
+                81,
+                2
+            ],
+            [
+                2,
+                81,
+                2
+            ]
+        ],
+        [
+            "minecraft:air",
+            [
+                2,
+                82,
+                2
+            ],
+            [
+                2,
+                82,
+                2
+            ]
+        ]
+    ],
+    "action_sequence": [
+        [
+            0,
+            "environment",
+            0,
+            null
+        ],
+        [
+            0,
+            "environment",
+            1,
+            null
+        ],
+        [
+            0,
+            "environment",
+            2,
+            null
+        ],
+        [
+            0,
+            "environment",
+            3,
+            null
+        ],
+        [
+            0,
+            "environment",
+            4,
+            null
+        ],
+        [
+            0,
+            "environment",
+            5,
+            null
+        ],
+        [
+            0,
+            "environment",
+            6,
+            null
+        ],
+        [
+            0,
+            "environment",
+            7,
+            null
+        ],
+        [
+            0,
+            "environment",
+            8,
+            null
+        ],
+        [
+            0,
+            "environment",
+            9,
+            null
+        ],
+        [
+            0,
+            "environment",
+            10,
+            null
+        ],
+        [
+            0,
+            "environment",
+            11,
+            null
+        ],
+        [
+            0,
+            "environment",
+            12,
+            null
+        ],
+        [
+            0,
+            "environment",
+            13,
+            null
+        ],
+        [
+            0,
+            "environment",
+            14,
+            null
+        ],
+        [
+            0,
+            "environment",
+            15,
+            null
+        ],
+        [
+            5,
+            "object_blocks",
+            0,
+            null
+        ],
+        [
+            5,
+            "object_mobs",
+            0,
+            null
+        ],
+        [
+            5,
+            "object_mobs",
+            1,
+            null
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                2,
+                85,
+                2
+            ],
+            [
+                2,
+                85,
+                2
+            ]
+        ],
+        [
+            7,
+            "get_block_id",
+            null,
+            [
+                2,
+                84,
+                2
+            ],
+            [
+                2,
+                84,
+                2
+            ]
+        ],
+        [
+            8,
+            "get_block_id",
+            null,
+            [
+                2,
+                83,
+                2
+            ],
+            [
+                2,
+                83,
+                2
+            ]
+        ],
+        [
+            9,
+            "get_block_id",
+            null,
+            [
+                2,
+                75,
+                2
+            ],
+            [
+                2,
+                75,
+                2
+            ]
+        ],
+        [
+            10,
+            "get_block_id",
+            null,
+            [
+                2,
+                71,
+                2
+            ],
+            [
+                2,
+                71,
+                2
+            ]
+        ],
+        [
+            15,
+            "sleep_till",
+            null
+        ]
+    ],
+    "fitness": {
+        "structure_complexity": {
+            "reason": "The structure is a simple 3x3 vertical glass shaft with a central column, featuring a basic rectangular geometry without non-linear elements, multi-level troughs, or complex cavities. While it has some internal glass barriers at Y=72, the overall design remains a straightforward vertical container.",
+            "fitness": 0.3,
+            "direction": "Structure: [Refine the geometric cavity to be non-trivial; create a spiral or zigzag vertical channel with offset platforms and irregular wall protrusions to create complex flow boundaries]"
+        },
+        "water_variety": {
+            "reason": "The logs show only level 0 water at positions (2,85,2), (2,84,2), and (2,83,2) along the central column where objects move. The water column appears uniformly deep with no evidence of varied water levels (1-7) along the object trajectories. The magma block and soul sand create bubble columns but don't produce water level gradients.",
+            "fitness": 0.1,
+            "direction": "Fluid: [Adjust source placement to create a sloped water basin with multiple source blocks at different heights, ensuring objects pass through water levels 0-7 as they descend through the narrowing column]"
+        },
+        "object_fitness": {
+            "reason": "The test uses 5 objects (gravel, anvil, scaffolding, drowned, magma cube) which exceeds the optimal limit of 2. Gravel and anvil are redundant sinking blocks. The drowned (swimming mob) and magma cube (fluid-interactive) are interesting but diluted by too many subjects. The scaffolding block is listed in both gravity and fluid-interactive categories, making it potentially valuable for testing hollow block behavior.",
+            "fitness": 0.4,
+            "direction": "Object: [Remove gravel and anvil, keep only scaffolding and magma cube to test interaction between a hollow block and a fluid-interactive mob in the bubble column environment]"
+        },
+        "environment_fitness": {
+            "reason": "The environment has conflicting upward currents (magma block at Y=75 creates downflow, soul sand at Y=71 creates upflow) in the same column, canceling each other. The glass barriers at Y=72 may block vertical flow. The central air column from Y=73-81 suggests the water doesn't fill the entire shaft, creating air pockets that disrupt continuous water physics testing.",
+            "fitness": 0.2,
+            "direction": "Environment: [Remove conflicting bubble sources, use only soul sand for consistent upward current throughout the full water column, and ensure complete water filling without air gaps in the test region]"
+        },
+        "buoyancy_inconsistency": {
+            "reason": "All objects remain completely stationary at their initial positions throughout the 15-second test. Gravel and anvil should sink but don't move. Scaffolding (hollow block) should float or be affected by currents but remains fixed. Drowned should swim or float but stays at Y=84. Magma cube should interact with water but is stationary. This complete lack of motion contradicts expected buoyancy/physics behavior for all object types.",
+            "fitness": 0.98,
+            "direction": "Expectation: [Increase test duration to 30+ seconds, add water flow detection commands to verify current existence, and introduce displacement mechanisms to ensure objects actually enter the water column rather than spawning in stationary positions]"
+        }
+    },
+    "tested_times": 1
+}

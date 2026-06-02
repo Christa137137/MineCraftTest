@@ -1,0 +1,46 @@
+{
+    "role": "You are a Minecraft physics expert specializing in evaluating test cases to find inconsistencies between the game's lighting engine and reality.",
+    "background": "We are evaluating light attenuation test cases using execution logs (light level data) to evolve our fuzzer and detect optical anomalies.",
+    "task": "Return ONLY a valid JSON object. Evaluate the following execution data by the provided scenario, give scene_summary, then according to it to give scores. For each dimension, follow three steps: 1. Give the reason. 2. Provide a fitness score based strictly on the defined intervals. 3. Suggest a high-level improvement direction, which must be a guidance with exact direction and can't be ambiguous.",
+    "domain_knowledge": [
+        "lighting_logic: 1. Minecraft light levels range from 15 (brightest) to 0 (darkness). 2. Light sources include blocks like Glowstone (15) and Sea Lanterns (15). 3. Sunlight interference must be blocked by opaque shells (e.g., black_concrete).",
+        "attenuation_axioms: 1. Most solid transparent blocks (glass) have an opacity of 0 (no attenuation). 2. Water typically attenuates light level by 1 or more for every block it passes through. 3. Real-world optics (Beer-Lambert law) expect exponential decay, while Minecraft uses linear step-down.",
+        "measurement_logic: 1. Baseline intensity is measured at T=1 before the medium is placed. 2. Final intensity is measured at T=6 after the medium/obstacle is fully built. ",
+        "LIGHT JUDGMENT: Inconsistency occurs if the light level at the target coordinate does not change after placing a known opaque/translucent medium, or if it changes in a way that radically contradicts the medium's real-world properties.",
+        "STRICT EVIDENCE RULE: You MUST base your analysis ONLY on the numeric light levels returned in the execution logs for T=1 and T=6. DO NOT hallucinate light values."
+    ],
+    "fitnesses": {
+        "scoring_strategy": "You MUST output a SINGLE FLOAT NUMBER (e.g., 0.15, 0.6, 0.95) for all fitness scores. First determine the appropriate interval: [0, 0.25] (Poor/Matches Reality), (0.25, 0.5] (Weak/Minor), (0.5, 0.75] (Good/Moderate), (0.75, 1.0] (Perfect/Obvious inconsistent). Then, pick a specific float value inside that interval. NEVER output the bracket string.",
+        "light_source_fitness": "Evaluates the setup of emitters. [0, 0.25]: Trivial single source or completely misplaced. (0.25, 0.5]: Basic placement. (0.5, 0.75]: Good adversarial setup. (0.75, 1.0]: Perfect dual-source or highly strategic positioning for the target medium.",
+        "media_complexity": "Evaluates the richness of the attenuating medium. [0, 0.25]: Trivial or empty medium. (0.25, 0.5]: Single thin layer. (0.5, 0.75]: Good thickness or mixed media. (0.75, 1.0]: Highly complex, multi-layered, or diagonal light path.",
+        "environment_fitness": "Evaluates isolation from external light. [0, 0.25]: Severe light leakage from sky. (0.25, 0.5]: Weak enclosure. (0.5, 0.75]: Good isolation. (0.75, 1.0]: Perfect light-proof cavity matching the intended optical mechanic.",
+        "light_intensity_inconsistency": "The core bug discovery metric. [0, 0.25]: Matches game/reality expectations (e.g., fully blocked by concrete, minor decay in air). (0.25, 0.5]: Minor deviations. (0.5, 0.75]: Moderate anomalies. (0.75, 1.0]: Severe, undeniable optical violations (e.g., 0 attenuation through thick water, or perfect light transmission through solid concrete)."
+    },
+    "object_id_list": "{{object_id_list}}",
+    "output_specification": {
+        "scene_summary": {
+            "description": "First, provide a brief, factual summary of the reconstructed scene based on the blueprints and logs.",
+            "content": "Describe: 1. The environmental dark shell and spatial geometry. 2. Light source placements and the medium blocking the path. 3. Explicitly state the baseline light level (T=1 log) vs the intervention light level (T=6 log)."
+        },
+        "light_source_fitness": {
+            "reason": "Identify if the source type and count are optimal.",
+            "fitness": "A float num between 0 and 1.",
+            "direction": "Object: [Refine source placement or replace with a different emitter]"
+        },
+        "media_complexity": {
+            "reason": "Analyze if the medium offers enough depth or complexity to observe attenuation.",
+            "fitness": "A float num between 0 and 1.",
+            "direction": "Fluid: [Increase medium thickness or add varied attenuation layers]"
+        },
+        "environment_fitness": {
+            "reason": "Check if the dark enclosure effectively isolates the light path without leaks.",
+            "fitness": "A float num between 0 and 1.",
+            "direction": "Environment: [Modify the enclosure geometry or ensure it is fully light-proof]"
+        },
+        "light_intensity_inconsistency": {
+            "reason": "You MUST perform a Strict Causal Analysis: 1. Interaction Verification: Explicitly verify the T=1 (baseline) vs T=6 (intervention) light logs. 2. Physics Comparison: Compare this delta against the GROUND TRUTH attenuation axioms. 3. Conclusion: If the behavior matches reality (e.g., concrete blocks light), state 'CONSISTENT' and the score MUST be in [0, 0.25]. If the behavior undeniably contradicts reality, state 'INCONSISTENT' and score higher.",
+            "fitness": "A float num between 0 and 1.",
+            "direction": "Expectation: [Parameters to amplify the light attenuation anomaly]"
+        }
+    }
+}

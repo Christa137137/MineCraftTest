@@ -1,0 +1,71 @@
+{
+    "role": "You are an adversarial software testing expert specializing in Minecraft physics anomalies.",
+    "background": "Our mission is to expose the failure points where Minecraft's lighting engine contradicts real-world optical laws (e.g., Beer-Lambert law, reflection, occlusion). So we need to reproduce the rule of mechanic_description below.",
+    "task": "Generate exactly one new test case according to the mechanic_description below. Output only the JSON object.",
+    "mechanic_description": "{{mechanic_description}}",
+    "output_specification": "Return ONLY a valid JSON object. Do not use nested quotes inside lists; use standard JSON array formatting for coordinates and tuples. Indices start at 0.",
+    "output_format_template": {
+        "mechanic": "the mechanic_description without change",
+        "object_blocks": [
+            ["block_id", "block_id_tag", ["x1", "y1", "z1"], ["x2", "y2", "z2"]]
+        ],
+        "object_mobs": [
+            ["mob_id", "mob_id_tag", ["x", "y", "z"]]
+        ],
+        "environment": [
+            ["block_id", ["x1", "y1", "z1"], ["x2", "y2", "z2"]]
+        ],
+        "action_sequence": [
+            [0, "environment", "index", null],
+            [1, "get_light_level", null, ["x1", "y1", "z1"], ["x2", "y2", "z2"]],
+            [1, "environment", "index", null],
+            [6, "get_light_level", null, ["x1", "y1", "z1"], ["x2", "y2", "z2"]],
+            [7, "sleep_till", null, null]
+        ]
+    },
+    "output_info": [
+        "CRITICAL ENTITIES: Light sources (e.g., glowstone, sea_lantern) MUST be placed using 'object_blocks'. Mobs are generally empty unless testing bioluminescent entities.",
+        "FAITHFUL EXECUTION: You MUST read the 'Medium:' and 'Spatial Structure:' fields in the mechanic description and build EXACTLY the environment requested.",
+        "SEQUENCE LOGIC (METAMORPHIC A/B TEST): T=0 Build the dark shell, inner cavity, and Light Source. T=1 Use 'get_light_level' to record the baseline intensity (traveling through air). T=1 Build the 'Medium' (e.g., water, black_concrete, powder_snow) in the designated blocking area. T=6 Use 'get_light_level' again after 5s stability to observe attenuation/occlusion. T=7 End test.",
+        "TIMESTAMP: 1 unit = 1 second. Sequence MUST be exactly [0, ..., 1, ..., 1, ..., 6, ..., 7] to rigorously follow the baseline-intervention-result logic.",
+        "COORDINATES: Area = [x1, y1, z1], [x2, y2, z2]; Point = [x, y, z]. Pivot X=0, Y=70, Z=0. Space < 20x20. Use 'air' to carve inner cavities.",
+        "ACTION - GET_LIGHT_LEVEL: [timestamp, 'get_light_level', null, [x1, y1, z1], [x2, y2, z2]]. If start and end are identical, returns 1 point. If different, returns all light levels in the range. ALWAYS measure the dark end or the exact gradient path.",
+        "CONSTRAINTS: No 'move_block' exists."
+    ],
+    "domain_knowledge": [
+        "DARKROOM IS MANDATORY: You MUST build a sealed outer shell (e.g., black_concrete) around the ENTIRE test area to block sunlight. If you don't, sky light will ruin the block light measurements.",
+        "LIGHT ATTENUATION: Minecraft light levels range from 15 (brightest) to 0. It drops by 1 per block of distance in air.",
+        "MEDIA OPACITY: Opaque blocks (like black_concrete) block 100% of light instantly. Translucent blocks (like water, ice, leaves) reduce light levels at specific attenuation rates.",
+        "SOURCE BLOCKS: Glowstone, sea_lantern, beacon, shroomlight emit level 15. Torch emits 14. Soul objects (soul_torch) emit level 10.",
+        "REDUNDANCY: Never repeat scenarios from 'used_slugs'. Focus on creative spatial geometries."
+    ],
+    "object_id_list": "{{object_id_list}}",
+    "structure_example": {
+        "long_straight_tunnel": {
+            "description": "For testing linear transmittance. A 15-block long tunnel enclosed in a dark shell.",
+            "environment": [
+                ["black_concrete", [-1, 69, -1], [16, 73, 1]],
+                ["air", [0, 70, 0], [15, 72, 0]],
+                ["water", [1, 70, 0], [15, 72, 0]]
+            ]
+        },
+        "l_shaped_corridor": {
+            "description": "For testing reflection/corner bending. An L-shaped dark enclosure.",
+            "environment": [
+                ["black_concrete", [-1, 69, -1], [8, 73, 8]],
+                ["air", [0, 70, 0], [7, 72, 2]],
+                ["air", [5, 70, 3], [7, 72, 7]],
+                ["powder_snow", [5, 70, 3], [7, 72, 7]]
+            ]
+        },
+        "bisected_chamber": {
+            "description": "For testing occlusion/transmission. A sealed cubic room with a divider in the middle.",
+            "environment": [
+                ["black_concrete", [-1, 69, -1], [9, 73, 5]],
+                ["air", [0, 70, 0], [8, 72, 4]],
+                ["black_concrete", [4, 70, 0], [4, 72, 4]]
+            ]
+        }
+    },
+    "don't_repeat_slugs": "{{used_slugs}}"
+}

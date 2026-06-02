@@ -1,0 +1,597 @@
+{
+    "status": 1,
+    "timestamp": "2026-02-03T18:03:17.580115",
+    "logs": [
+        "[0s] generate env blocks: fill 0 65 0 4 85 4 minecraft:glass",
+        "[0s] generate env blocks: fill 1 66 1 3 85 3 minecraft:air",
+        "[0s] generate env blocks: fill 1 65 1 3 65 3 minecraft:glass",
+        "[0s] generate env blocks: fill 2 66 2 2 66 2 minecraft:soul_sand",
+        "[0s] generate env blocks: fill 1 67 1 3 67 3 minecraft:water",
+        "[0s] generate env blocks: fill 2 68 2 2 68 2 minecraft:water",
+        "[0s] generate env blocks: fill 2 69 2 2 69 2 minecraft:water",
+        "[0s] generate env blocks: fill 2 70 2 2 70 2 minecraft:water",
+        "[0s] generate env blocks: fill 0 85 0 4 85 4 minecraft:glass",
+        "[0s] generate env blocks: fill 1 86 1 3 86 3 minecraft:air",
+        "[0s] generate env blocks: fill 2 67 1 2 67 1 minecraft:glass",
+        "[0s] generate env blocks: fill 2 67 3 2 67 3 minecraft:glass",
+        "[0.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[0.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[0.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[0.5s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[1.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[1.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[1.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[1.0s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[1.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[1.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[1.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[1.5s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[2.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[2.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[2.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[2.0s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[2.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[2.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[2.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[2.5s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[3.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[3.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[3.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[3.0s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[3.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[3.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[3.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[3.5s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[4.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[4.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[4.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[4.0s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[4.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[4.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[4.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[4.5s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[5.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[5.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[5.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[5.0s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[5.0s] generate falling block: summon falling_block 2 80 2 {BlockState:{Name:\"minecraft:scaffolding\"},Time:1,Tags:[\"test_scaffolding\"]}",
+        "[5.0s] generate obj mob: summon minecraft:oak_boat 2 67 2 {Tags:[\"test_boat\"]}",
+        "[5.0s] generate obj mob: summon minecraft:minecart 2 67 3 {Tags:[\"test_minecart\"]}",
+        "[5.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[5.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[5.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[5.5s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[5.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[6.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[6.0s][mob] test_boat pos: [2.5, 67.0, 2.5]",
+        "[6.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[6.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[6.0s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[6.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[6.0s][mob] test_minecart pos: [2.5, 67.0, 3.5]",
+        "[6.0s] check block id of range 2 67 2 to 2 67 2: [2,67,2]:[WATER, level:0]\n",
+        "[6.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[6.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[6.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[6.5s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[6.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[7.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[7.0s][mob] test_boat pos: [2.5, 67.0, 2.5]",
+        "[7.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[7.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[7.0s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[7.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[7.0s][mob] test_minecart pos: [2.5, 67.0, 3.5]",
+        "[7.0s] check block id of range 2 68 2 to 2 68 2: [2,68,2]:[WATER, level:0]\n",
+        "[7.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[7.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[7.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[7.5s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[7.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[8.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[8.0s][mob] test_boat pos: [2.5, 67.0, 2.5]",
+        "[8.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[8.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[8.0s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[8.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[8.0s][mob] test_minecart pos: [2.5, 67.0, 3.5]",
+        "[8.0s] check block id of range 2 69 2 to 2 69 2: [2,69,2]:[WATER, level:0]\n",
+        "[8.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[8.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[8.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[8.5s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[8.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[9.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[9.0s][mob] test_boat pos: [2.5, 67.0, 2.5]",
+        "[9.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[9.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[9.0s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[9.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[9.0s][mob] test_minecart pos: [2.5, 67.0, 3.5]",
+        "[9.0s] check block id of range 2 70 2 to 2 70 2: [2,70,2]:[WATER, level:0]\n",
+        "[9.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[9.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[9.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[9.5s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[9.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[10.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[10.0s][mob] test_boat pos: [2.5, 67.0, 2.5]",
+        "[10.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[10.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[10.0s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[10.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[10.0s][mob] test_minecart pos: [2.5, 67.0, 3.5]",
+        "[10.0s] check block id of range 2 75 2 to 2 75 2: [2,75,2]:AIR\n",
+        "[10.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[10.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[10.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[10.5s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[10.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[11.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[11.0s][mob] test_boat pos: [2.5, 67.0, 2.5]",
+        "[11.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[11.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[11.0s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[11.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[11.0s][mob] test_minecart pos: [2.5, 67.0, 3.5]",
+        "[11.0s] check block id of range 2 80 2 to 2 80 2: [2,80,2]:AIR\n",
+        "[11.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[11.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[11.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[11.5s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[11.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[12.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[12.0s][mob] test_boat pos: [2.5, 67.0, 2.5]",
+        "[12.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[12.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[12.0s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[12.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[12.0s][mob] test_minecart pos: [2.5, 67.0, 3.5]",
+        "[12.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[12.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[12.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[12.5s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[12.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[13.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[13.0s][mob] test_boat pos: [2.5, 67.0, 2.5]",
+        "[13.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[13.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[13.0s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[13.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[13.0s][mob] test_minecart pos: [2.5, 67.0, 3.5]",
+        "[13.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[13.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[13.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[13.5s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[13.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[14.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[14.0s][mob] test_boat pos: [2.5, 67.0, 2.5]",
+        "[14.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[14.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[14.0s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[14.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[14.0s][mob] test_minecart pos: [2.5, 67.0, 3.5]",
+        "[14.5s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[14.5s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[14.5s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[14.5s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[14.5s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[15.0s][block] test_gravel pos: [2.5, 78.0, 2.5]",
+        "[15.0s][mob] test_boat pos: [2.5, 67.0, 2.5]",
+        "[15.0s][block] test_anvil pos: [5.5, 85.0, 5.5]",
+        "[15.0s][block] scaffolding_1 pos: [3.5, 78.0, 3.5]",
+        "[15.0s][block] anvil_1 pos: [3.5, 78.0, 3.5]",
+        "[15.0s][block] test_scaffolding pos: [3.5, 78.0, 3.5]",
+        "[15.0s][mob] test_minecart pos: [2.5, 67.0, 3.5]"
+    ],
+    "mechanic": "Structure: A vertical containment shaft with a narrow central column and a wider upper reservoir; Fluid: A stationary, deep water column with a localized upward current generated by a submerged source; Object: A low-density, interactive block with a hollow interior; Expectation: The object initially floats at the surface, but when displaced into the upward current, it experiences a vertical force that counteracts its weight, leading to a state of suspended equilibrium or oscillatory motion within the central column.",
+    "object_blocks": [
+        [
+            "minecraft:scaffolding",
+            "test_scaffolding",
+            [
+                2,
+                80,
+                2
+            ],
+            [
+                2,
+                80,
+                2
+            ]
+        ]
+    ],
+    "object_mobs": [
+        [
+            "minecraft:oak_boat",
+            "test_boat",
+            [
+                2,
+                67,
+                2
+            ]
+        ],
+        [
+            "minecraft:minecart",
+            "test_minecart",
+            [
+                2,
+                67,
+                3
+            ]
+        ]
+    ],
+    "environment": [
+        [
+            "minecraft:glass",
+            [
+                0,
+                65,
+                0
+            ],
+            [
+                4,
+                85,
+                4
+            ]
+        ],
+        [
+            "minecraft:air",
+            [
+                1,
+                66,
+                1
+            ],
+            [
+                3,
+                85,
+                3
+            ]
+        ],
+        [
+            "minecraft:glass",
+            [
+                1,
+                65,
+                1
+            ],
+            [
+                3,
+                65,
+                3
+            ]
+        ],
+        [
+            "minecraft:soul_sand",
+            [
+                2,
+                66,
+                2
+            ],
+            [
+                2,
+                66,
+                2
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                67,
+                1
+            ],
+            [
+                3,
+                67,
+                3
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                2,
+                68,
+                2
+            ],
+            [
+                2,
+                68,
+                2
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                2,
+                69,
+                2
+            ],
+            [
+                2,
+                69,
+                2
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                2,
+                70,
+                2
+            ],
+            [
+                2,
+                70,
+                2
+            ]
+        ],
+        [
+            "minecraft:glass",
+            [
+                0,
+                85,
+                0
+            ],
+            [
+                4,
+                85,
+                4
+            ]
+        ],
+        [
+            "minecraft:air",
+            [
+                1,
+                86,
+                1
+            ],
+            [
+                3,
+                86,
+                3
+            ]
+        ],
+        [
+            "minecraft:glass",
+            [
+                2,
+                67,
+                1
+            ],
+            [
+                2,
+                67,
+                1
+            ]
+        ],
+        [
+            "minecraft:glass",
+            [
+                2,
+                67,
+                3
+            ],
+            [
+                2,
+                67,
+                3
+            ]
+        ]
+    ],
+    "action_sequence": [
+        [
+            0,
+            "environment",
+            0,
+            null
+        ],
+        [
+            0,
+            "environment",
+            1,
+            null
+        ],
+        [
+            0,
+            "environment",
+            2,
+            null
+        ],
+        [
+            0,
+            "environment",
+            3,
+            null
+        ],
+        [
+            0,
+            "environment",
+            4,
+            null
+        ],
+        [
+            0,
+            "environment",
+            5,
+            null
+        ],
+        [
+            0,
+            "environment",
+            6,
+            null
+        ],
+        [
+            0,
+            "environment",
+            7,
+            null
+        ],
+        [
+            0,
+            "environment",
+            8,
+            null
+        ],
+        [
+            0,
+            "environment",
+            9,
+            null
+        ],
+        [
+            0,
+            "environment",
+            10,
+            null
+        ],
+        [
+            0,
+            "environment",
+            11,
+            null
+        ],
+        [
+            5,
+            "object_blocks",
+            0,
+            null
+        ],
+        [
+            5,
+            "object_mobs",
+            0,
+            null
+        ],
+        [
+            5,
+            "object_mobs",
+            1,
+            null
+        ],
+        [
+            6,
+            "get_block_id",
+            null,
+            [
+                2,
+                67,
+                2
+            ],
+            [
+                2,
+                67,
+                2
+            ]
+        ],
+        [
+            7,
+            "get_block_id",
+            null,
+            [
+                2,
+                68,
+                2
+            ],
+            [
+                2,
+                68,
+                2
+            ]
+        ],
+        [
+            8,
+            "get_block_id",
+            null,
+            [
+                2,
+                69,
+                2
+            ],
+            [
+                2,
+                69,
+                2
+            ]
+        ],
+        [
+            9,
+            "get_block_id",
+            null,
+            [
+                2,
+                70,
+                2
+            ],
+            [
+                2,
+                70,
+                2
+            ]
+        ],
+        [
+            10,
+            "get_block_id",
+            null,
+            [
+                2,
+                75,
+                2
+            ],
+            [
+                2,
+                75,
+                2
+            ]
+        ],
+        [
+            11,
+            "get_block_id",
+            null,
+            [
+                2,
+                80,
+                2
+            ],
+            [
+                2,
+                80,
+                2
+            ]
+        ],
+        [
+            15,
+            "sleep_till",
+            null
+        ]
+    ],
+    "fitness": {
+        "structure_complexity": {
+            "reason": "The structure is a simple vertical glass shaft with a 3x3 interior and a central 1x1 column created by glass blocks at y=67. While it has some vertical height (y65-y85), the geometry remains essentially a rectangular prism with a narrow central restriction. There's no multi-level trough, non-linear cavity, or complex geometric boundaries.",
+            "fitness": 0.3,
+            "direction": "Structure: [Introduce a spiraling or zigzagging vertical shaft with alternating narrow and wide sections to create complex flow boundaries and trapping zones]"
+        },
+        "water_variety": {
+            "reason": "The water column consists entirely of level 0 (source blocks) from y=67 to y=70, as confirmed by block checks. The test objects (boat, minecart) remain stationary at y=67 and never traverse through any water level gradient. The falling scaffolding block is generated outside the water column and never enters it. No object interacts with varied water levels.",
+            "fitness": 0.0,
+            "direction": "Fluid: [Replace the soul sand bubble column with a traditional water source at the top that creates a spreading gradient (levels 0-7) down the shaft, ensuring objects fall through multiple attenuation levels]"
+        },
+        "object_fitness": {
+            "reason": "The test uses multiple objects (scaffolding, anvil, gravel, boat, minecart) but most are irrelevant to the intended mechanic. The key objects for testing upward currents (boat, minecart) are placed directly in still water (level 0) at the bottom, not at the surface as described. The 'low-density, interactive block with hollow interior' (scaffolding) is generated outside the water and never interacts with the current. The object selection is scattered and unfocused.",
+            "fitness": 0.2,
+            "direction": "Object: [Remove all redundant objects (anvil, gravel, extra scaffolding). Place only the test scaffolding block at the water surface (y=85) above the bubble column, and add one boat entity at the same starting point to test interaction between two buoyant objects in the current]"
+        },
+        "environment_fitness": {
+            "reason": "The environment poorly aligns with the intended 'upward current' mechanic. A soul sand block at y=66 creates a bubble column, but the water above it is only 4 blocks deep (y67-y70), not a 'deep water column.' The upper reservoir is filled with air, not water. The test objects are not placed at the surface to 'initially float' nor displaced into the current. The environment fails to create the conditions described in the mechanic.",
+            "fitness": 0.1,
+            "direction": "Environment: [Extend the water column from the soul sand (y66) up to y85, creating a deep water shaft. Fill the upper reservoir (y86+) with water source blocks. Place the test objects at the top water surface (y85) so they float initially before being drawn into the upward current]"
+        },
+        "buoyancy_inconsistency": {
+            "reason": "The intended mechanic (floating objects suspended by upward current) cannot be evaluated because the setup is incorrect. However, a clear inconsistency is observed: The boat and minecart remain perfectly stationary at y=67.0 in a bubble column (soul sand at y66). In reality and expected Minecraft physics, entities in a bubble column should experience strong upward motion. The complete lack of vertical movement is a significant deviation. The scaffolding block also shows no movement, but it's not in water.",
+            "fitness": 0.9,
+            "direction": "Expectation: [Increase the depth and strength of the bubble column by extending water height and ensuring the soul sand is active, then precisely measure the upward velocity of entities to quantify the discrepancy from expected behavior]"
+        }
+    },
+    "tested_times": 1
+}

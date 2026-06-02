@@ -1,0 +1,448 @@
+{
+    "status": 1,
+    "timestamp": "2026-02-03T21:22:37.910372",
+    "logs": [
+        "[0s] generate env blocks: fill 0 70 0 4 85 4 minecraft:glass",
+        "[0s] generate env blocks: fill 1 71 1 3 84 3 minecraft:air",
+        "[0s] generate env blocks: fill 1 71 1 1 71 1 minecraft:water",
+        "[0s] generate env blocks: fill 1 72 1 1 72 1 minecraft:water",
+        "[0s] generate env blocks: fill 1 73 1 1 73 1 minecraft:water",
+        "[0s] generate env blocks: fill 1 74 1 1 74 1 minecraft:water",
+        "[0s] generate env blocks: fill 1 75 1 1 75 1 minecraft:water",
+        "[0s] generate env blocks: fill 1 76 1 1 76 1 minecraft:water",
+        "[0s] generate env blocks: fill 1 77 1 1 77 1 minecraft:water",
+        "[0s] generate env blocks: fill 1 78 1 1 78 1 minecraft:water",
+        "[0s] generate env blocks: fill 1 79 1 1 79 1 minecraft:water",
+        "[0s] generate env blocks: fill 1 80 1 1 80 1 minecraft:water",
+        "[0s] generate env blocks: fill 1 81 1 1 81 1 minecraft:water",
+        "[0s] generate env blocks: fill 1 82 1 1 82 1 minecraft:water",
+        "[0s] generate env blocks: fill 1 83 1 1 83 1 minecraft:water",
+        "[0s] generate env blocks: fill 1 84 1 1 84 1 minecraft:water",
+        "[0s] generate env blocks: fill 1 75 1 1 75 1 minecraft:soul_sand",
+        "[5.0s] generate falling block: summon falling_block 2 78 2 {BlockState:{Name:\"minecraft:anvil\"},Time:1,Tags:[\"high_density_core\"]}",
+        "[5.0s] generate falling block: summon falling_block 2 78 2 {BlockState:{Name:\"minecraft:scaffolding\"},Time:1,Tags:[\"low_density_shell\"]}",
+        "[5.5s][block] high_density_core pos: [2.5, 74.14, 2.5]",
+        "[5.5s][block] low_density_shell pos: [2.5, 74.64, 2.5]",
+        "[6.0s] check block id of range 2 74 2 to 2 74 2: [2,74,2]:AIR\n",
+        "[6.0s] check block id of range 2 73 2 to 2 73 2: [2,73,2]:AIR\n",
+        "[6.0s] check block id of range 2 72 2 to 2 72 2: [2,72,2]:AIR\n",
+        "[6.0s] check block id of range 2 71 2 to 2 71 2: [2,71,2]:ANVIL\n",
+        "[6.0s][SETTLED] high_density_core found at y=71: [2,71,2]:ANVIL\n",
+        "[6.0s] check block id of range 2 74 2 to 2 74 2: [2,74,2]:AIR\n",
+        "[6.0s] check block id of range 2 73 2 to 2 73 2: [2,73,2]:AIR\n",
+        "[6.0s] check block id of range 2 72 2 to 2 72 2: [2,72,2]:AIR\n",
+        "[6.0s] check block id of range 2 71 2 to 2 71 2: [2,71,2]:ANVIL\n",
+        "[6.0s] check block id of range 2 70 2 to 2 70 2: [2,70,2]:GLASS\n",
+        "[6.0s] check block id of range 2 69 2 to 2 69 2: [2,69,2]:AIR\n",
+        "[6.0s] check block id of range 2 68 2 to 2 68 2: [2,68,2]:AIR\n",
+        "[6.0s] check block id of range 2 67 2 to 2 67 2: [2,67,2]:AIR\n",
+        "[6.0s] check block id of range 2 66 2 to 2 66 2: [2,66,2]:AIR\n",
+        "[6.0s] check block id of range 2 65 2 to 2 65 2: [2,65,2]:AIR\n",
+        "[6.0s] check block id of range 2 64 2 to 2 64 2: [2,64,2]:AIR\n",
+        "[6.0s][DROPPED] low_density_shell missing but found item: Scaffolding has the following entity data: \"minecraft:scaffolding\""
+    ],
+    "mechanic": "Structure: A cylindrical vertical shaft with a sealed base and smooth interior walls; Fluid: A deep, stationary column of water with a uniform density profile; Object: A specialized interactive block possessing a high-density core and a low-density outer shell; Expectation: The object initially sinks due to its core's effective density, but upon reaching a critical depth, the shell's buoyant properties activate, causing the object to decelerate and achieve a state of neutral equilibrium, suspended within the fluid column.",
+    "object_blocks": [
+        [
+            "minecraft:anvil",
+            "high_density_core",
+            [
+                2,
+                78,
+                2
+            ],
+            [
+                2,
+                78,
+                2
+            ]
+        ],
+        [
+            "minecraft:scaffolding",
+            "low_density_shell",
+            [
+                2,
+                78,
+                2
+            ],
+            [
+                2,
+                78,
+                2
+            ]
+        ]
+    ],
+    "object_mobs": [],
+    "environment": [
+        [
+            "minecraft:glass",
+            [
+                0,
+                70,
+                0
+            ],
+            [
+                4,
+                85,
+                4
+            ]
+        ],
+        [
+            "minecraft:air",
+            [
+                1,
+                71,
+                1
+            ],
+            [
+                3,
+                84,
+                3
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                71,
+                1
+            ],
+            [
+                1,
+                71,
+                1
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                72,
+                1
+            ],
+            [
+                1,
+                72,
+                1
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                73,
+                1
+            ],
+            [
+                1,
+                73,
+                1
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                74,
+                1
+            ],
+            [
+                1,
+                74,
+                1
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                75,
+                1
+            ],
+            [
+                1,
+                75,
+                1
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                76,
+                1
+            ],
+            [
+                1,
+                76,
+                1
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                77,
+                1
+            ],
+            [
+                1,
+                77,
+                1
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                78,
+                1
+            ],
+            [
+                1,
+                78,
+                1
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                79,
+                1
+            ],
+            [
+                1,
+                79,
+                1
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                80,
+                1
+            ],
+            [
+                1,
+                80,
+                1
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                81,
+                1
+            ],
+            [
+                1,
+                81,
+                1
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                82,
+                1
+            ],
+            [
+                1,
+                82,
+                1
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                83,
+                1
+            ],
+            [
+                1,
+                83,
+                1
+            ]
+        ],
+        [
+            "minecraft:water",
+            [
+                1,
+                84,
+                1
+            ],
+            [
+                1,
+                84,
+                1
+            ]
+        ],
+        [
+            "minecraft:soul_sand",
+            [
+                1,
+                75,
+                1
+            ],
+            [
+                1,
+                75,
+                1
+            ]
+        ]
+    ],
+    "action_sequence": [
+        [
+            0,
+            "environment",
+            0,
+            null
+        ],
+        [
+            0,
+            "environment",
+            1,
+            null
+        ],
+        [
+            0,
+            "environment",
+            2,
+            null
+        ],
+        [
+            0,
+            "environment",
+            3,
+            null
+        ],
+        [
+            0,
+            "environment",
+            4,
+            null
+        ],
+        [
+            0,
+            "environment",
+            5,
+            null
+        ],
+        [
+            0,
+            "environment",
+            6,
+            null
+        ],
+        [
+            0,
+            "environment",
+            7,
+            null
+        ],
+        [
+            0,
+            "environment",
+            8,
+            null
+        ],
+        [
+            0,
+            "environment",
+            9,
+            null
+        ],
+        [
+            0,
+            "environment",
+            10,
+            null
+        ],
+        [
+            0,
+            "environment",
+            11,
+            null
+        ],
+        [
+            0,
+            "environment",
+            12,
+            null
+        ],
+        [
+            0,
+            "environment",
+            13,
+            null
+        ],
+        [
+            0,
+            "environment",
+            14,
+            null
+        ],
+        [
+            0,
+            "environment",
+            15,
+            null
+        ],
+        [
+            0,
+            "environment",
+            16,
+            null
+        ],
+        [
+            5,
+            "object_blocks",
+            0,
+            null
+        ],
+        [
+            5,
+            "object_blocks",
+            1,
+            null
+        ],
+        [
+            15,
+            "sleep_till",
+            null
+        ]
+    ],
+    "fitness": {
+        "structure_complexity": {
+            "reason": "The structure is a simple 3x3 vertical glass shaft with air interior and a single water column at x=1,z=1. This is essentially a basic vertical tube with uniform cross-section and no geometric complexity like non-linear paths, multi-level chambers, or irregular boundaries.",
+            "fitness": 0.2,
+            "direction": "Structure: [Refine the geometric cavity to be non-trivial; move beyond simple four-wall/one-floor designs by adding lateral offsets, staggered chambers, or helical pathways within the shaft to create complex flow boundaries]"
+        },
+        "water_variety": {
+            "reason": "The water column is created as individual source blocks stacked vertically from y=71 to y=84, all at level 0 (still water sources). The test objects (anvil and scaffolding) are spawned at x=2,z=2, which is adjacent to but not within the water column. They fall through air and land on glass at y=71 without ever entering water. Therefore, the objects encounter no water levels along their trajectory.",
+            "fitness": 0.0,
+            "direction": "Fluid: [Adjust source placement to ensure the object passes through multiple level gradients (0-7) by positioning the water column directly under the spawn point and using multiple source placements to create attenuation gradients horizontally or vertically along the fall path]"
+        },
+        "object_fitness": {
+            "reason": "The test uses an anvil (high-density core) and scaffolding (low-density shell) as a composite object. However, they are spawned as separate falling_block entities at the same coordinates, causing them to collide and likely interfere. The scaffolding disappears upon landing (converted to item), failing to act as a shell. The anvil alone is predictable (sinks). A more adversarial approach would be to test a single entity with composite density properties or use two interacting entities that don't interfere mechanically.",
+            "fitness": 0.3,
+            "direction": "Object: [Replace with an adversarial entity, add a second entity (limit 2 total), or change object_block, or remove redundant subjects by using a single custom entity with simulated composite density, or pair a dense mob (iron_golem) with a buoyant block (scaffolding) in a way that ensures interaction without disappearance]"
+        },
+        "environment_fitness": {
+            "reason": "The environment does not align with the intended mechanic. The water column is placed at (1,71,1)-(1,84,1), while objects spawn at (2,78,2) and fall at (2,71,2). The soul_sand at (1,75,1) creates a bubble column, but it only affects the adjacent water column, not the object's path. The objects never enter any fluid, so buoyancy mechanics are never triggered.",
+            "fitness": 0.1,
+            "direction": "Environment: [Modify boundaries, water placement, or other elements to better suit the mechanic by moving the water column to cover the object's fall path (x=2,z=2), removing the soul_sand to ensure stationary water, and ensuring the shaft is fully water-filled to test depth-dependent buoyancy activation]"
+        },
+        "buoyancy_inconsistency": {
+            "reason": "What object: Anvil and scaffolding as separate falling blocks. What environment: Vertical glass shaft with adjacent water column and soul_sand bubble column. What anomalous behavior: Both objects fall through air and settle on glass floor without ever interacting with water. The scaffolding disappears upon landing (converts to item entity 'Scaffolding'), failing to persist as a shell. The anvil becomes a static block. No buoyancy behavior is observed because the objects never enter fluid. What cause: Caused by misaligned spawn coordinates relative to water placement; objects spawned in air adjacent to water column instead of inside it. The soul_sand creates upward bubbles in the adjacent water but doesn't affect the air path.",
+            "fitness": 0.95,
+            "direction": "Expectation: [Tuning parameters to further amplify the detected inconsistency by ensuring objects spawn inside the water column, using stationary water (no soul_sand), and monitoring entity persistence to test composite buoyancy activation at critical depth]"
+        }
+    },
+    "tested_times": 1
+}
